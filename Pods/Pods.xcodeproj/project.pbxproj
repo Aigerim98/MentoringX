@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C3CFE3973D3624F683026AC6BBD1784 /* SwiftCheckboxDialog-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8983DFEAC3DD01E41A596970C284F96E /* SwiftCheckboxDialog-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D20A9C7D514C6E70A1417549706B968 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1ED3E8362A63EC5D2CE9FB80B021C48 /* String.swift */; };
+		3B2EE49D2D9943CC6D806C0B69F74B66 /* CheckboxDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA0E7AC3724EF9DFB5CB590A641A01A /* CheckboxDialogViewController.swift */; };
+		53DA4E9F3C0E5F3C3848BF8E86345580 /* SwiftCheckboxDialog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 302EBF8E00E8895D394693B8D91DDCE4 /* SwiftCheckboxDialog-dummy.m */; };
+		7275D5D3D8E8EBE80AF8FF8C600B2FD6 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1EB7C89FE254C334843C4E1564003E /* UIColor.swift */; };
+		7B123ECF4EA8F92C456992A1779DB89A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		7B6CC57B739394E319A95F41E13EF952 /* Pods-Mentoring-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D5BA1A73315EBB9CEA305EE54E14AE3 /* Pods-Mentoring-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		969ED07D0847DA900C8375490F7FE2ED /* Pods-Mentoring-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 012E8892C0BCF8DC20BA0A59CFE36B27 /* Pods-Mentoring-dummy.m */; };
+		D236F75DB4755FD31B3BB675B8A62455 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E5AEF187B8492A86C915AAA6A2FCA5FC /* CheckboxViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31F93CA06B5F7824A3F42DDC2F7584 /* CheckboxViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1271B47BCDF060A64E9E1B673772D4F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5935C285ED9588C594F1CBDEE2C59EA3;
+			remoteInfo = SwiftCheckboxDialog;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		012BB0D57AE2EFF766C75AE63D43AF00 /* Pods-Mentoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mentoring.release.xcconfig"; sourceTree = "<group>"; };
+		012E8892C0BCF8DC20BA0A59CFE36B27 /* Pods-Mentoring-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mentoring-dummy.m"; sourceTree = "<group>"; };
+		081A616F85493CD125E475C779DE9869 /* Pods-Mentoring-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mentoring-acknowledgements.plist"; sourceTree = "<group>"; };
+		2CA0E7AC3724EF9DFB5CB590A641A01A /* CheckboxDialogViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxDialogViewController.swift; path = SwiftCheckboxDialog/Classes/CheckboxDialogViewController.swift; sourceTree = "<group>"; };
+		302EBF8E00E8895D394693B8D91DDCE4 /* SwiftCheckboxDialog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCheckboxDialog-dummy.m"; sourceTree = "<group>"; };
+		394D898DDD67C7439DC702B15F2E1F49 /* Pods-Mentoring */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Mentoring"; path = Pods_Mentoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		616006B991C59E1426DC23F770CF3BA9 /* SwiftCheckboxDialog */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftCheckboxDialog; path = SwiftCheckboxDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D5BA1A73315EBB9CEA305EE54E14AE3 /* Pods-Mentoring-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mentoring-umbrella.h"; sourceTree = "<group>"; };
+		6D75891A853FB087339E53FD4C7DDDBA /* SwiftCheckboxDialog.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftCheckboxDialog.modulemap; sourceTree = "<group>"; };
+		6DFD3CCCE345C56BDC436E6978839CBD /* SwiftCheckboxDialog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCheckboxDialog.release.xcconfig; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		756BCBC9BE139F5097A8953D6382D95D /* Pods-Mentoring-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mentoring-Info.plist"; sourceTree = "<group>"; };
+		7ACCEBA123E900BE27D81664AE02963B /* Pods-Mentoring.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mentoring.modulemap"; sourceTree = "<group>"; };
+		8828C1E2DFDED17609CF27AC9D988A29 /* Pods-Mentoring-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mentoring-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8983DFEAC3DD01E41A596970C284F96E /* SwiftCheckboxDialog-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCheckboxDialog-umbrella.h"; sourceTree = "<group>"; };
+		987548C6A4873CC15DCE2DED4B53F80C /* SwiftCheckboxDialog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCheckboxDialog.debug.xcconfig; sourceTree = "<group>"; };
+		9C31F93CA06B5F7824A3F42DDC2F7584 /* CheckboxViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckboxViewCell.swift; path = SwiftCheckboxDialog/Classes/CheckboxViewCell.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A83BF0B206A887F308EBC2FC28DC170A /* SwiftCheckboxDialog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCheckboxDialog-prefix.pch"; sourceTree = "<group>"; };
+		B1ED3E8362A63EC5D2CE9FB80B021C48 /* String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = String.swift; path = SwiftCheckboxDialog/Classes/String.swift; sourceTree = "<group>"; };
+		B364A1C1F8B26502A9FBEA6005F03184 /* Pods-Mentoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mentoring.debug.xcconfig"; sourceTree = "<group>"; };
+		EA2E90F8CE1FBFE9E5B6C00143F02386 /* Pods-Mentoring-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mentoring-frameworks.sh"; sourceTree = "<group>"; };
+		FD1EB7C89FE254C334843C4E1564003E /* UIColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColor.swift; path = SwiftCheckboxDialog/Classes/UIColor.swift; sourceTree = "<group>"; };
+		FDF6E6A9666D08CCA042D862CFCA4936 /* SwiftCheckboxDialog-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftCheckboxDialog-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		293D3AC545182EF287010B4A5FA1CE63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B123ECF4EA8F92C456992A1779DB89A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FECD38941AB51974CE771B101C9BA72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D236F75DB4755FD31B3BB675B8A62455 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C2C3C35DF40AF931EF81E9BF106CBD1 /* SwiftCheckboxDialog */ = {
+			isa = PBXGroup;
+			children = (
+				2CA0E7AC3724EF9DFB5CB590A641A01A /* CheckboxDialogViewController.swift */,
+				9C31F93CA06B5F7824A3F42DDC2F7584 /* CheckboxViewCell.swift */,
+				B1ED3E8362A63EC5D2CE9FB80B021C48 /* String.swift */,
+				FD1EB7C89FE254C334843C4E1564003E /* UIColor.swift */,
+				6BDE1F56116B38449B5BF131587E87C7 /* Support Files */,
+			);
+			name = SwiftCheckboxDialog;
+			path = SwiftCheckboxDialog;
+			sourceTree = "<group>";
+		};
+		21742072AF372E8398812FCD22E00DB2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				989DD8DD80589AABB203721C2D76D7BE /* Pods-Mentoring */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6BDE1F56116B38449B5BF131587E87C7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D75891A853FB087339E53FD4C7DDDBA /* SwiftCheckboxDialog.modulemap */,
+				302EBF8E00E8895D394693B8D91DDCE4 /* SwiftCheckboxDialog-dummy.m */,
+				FDF6E6A9666D08CCA042D862CFCA4936 /* SwiftCheckboxDialog-Info.plist */,
+				A83BF0B206A887F308EBC2FC28DC170A /* SwiftCheckboxDialog-prefix.pch */,
+				8983DFEAC3DD01E41A596970C284F96E /* SwiftCheckboxDialog-umbrella.h */,
+				987548C6A4873CC15DCE2DED4B53F80C /* SwiftCheckboxDialog.debug.xcconfig */,
+				6DFD3CCCE345C56BDC436E6978839CBD /* SwiftCheckboxDialog.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCheckboxDialog";
+			sourceTree = "<group>";
+		};
+		6C76C6F0303DD00145C4F0FF4F5B9F07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				394D898DDD67C7439DC702B15F2E1F49 /* Pods-Mentoring */,
+				616006B991C59E1426DC23F770CF3BA9 /* SwiftCheckboxDialog */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		989DD8DD80589AABB203721C2D76D7BE /* Pods-Mentoring */ = {
+			isa = PBXGroup;
+			children = (
+				7ACCEBA123E900BE27D81664AE02963B /* Pods-Mentoring.modulemap */,
+				8828C1E2DFDED17609CF27AC9D988A29 /* Pods-Mentoring-acknowledgements.markdown */,
+				081A616F85493CD125E475C779DE9869 /* Pods-Mentoring-acknowledgements.plist */,
+				012E8892C0BCF8DC20BA0A59CFE36B27 /* Pods-Mentoring-dummy.m */,
+				EA2E90F8CE1FBFE9E5B6C00143F02386 /* Pods-Mentoring-frameworks.sh */,
+				756BCBC9BE139F5097A8953D6382D95D /* Pods-Mentoring-Info.plist */,
+				6D5BA1A73315EBB9CEA305EE54E14AE3 /* Pods-Mentoring-umbrella.h */,
+				B364A1C1F8B26502A9FBEA6005F03184 /* Pods-Mentoring.debug.xcconfig */,
+				012BB0D57AE2EFF766C75AE63D43AF00 /* Pods-Mentoring.release.xcconfig */,
+			);
+			name = "Pods-Mentoring";
+			path = "Target Support Files/Pods-Mentoring";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				E9EDA611C6DD254102F35F82A6C15D0D /* Pods */,
+				6C76C6F0303DD00145C4F0FF4F5B9F07 /* Products */,
+				21742072AF372E8398812FCD22E00DB2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9EDA611C6DD254102F35F82A6C15D0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C2C3C35DF40AF931EF81E9BF106CBD1 /* SwiftCheckboxDialog */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A2BEFB4ED3FC11EA272AC33F4365A02F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B6CC57B739394E319A95F41E13EF952 /* Pods-Mentoring-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E01C91846AD06A8F313F08B1F74E2B0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C3CFE3973D3624F683026AC6BBD1784 /* SwiftCheckboxDialog-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5935C285ED9588C594F1CBDEE2C59EA3 /* SwiftCheckboxDialog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2E187DC5BB2E8B00EAB301E8CA36CFA /* Build configuration list for PBXNativeTarget "SwiftCheckboxDialog" */;
+			buildPhases = (
+				E01C91846AD06A8F313F08B1F74E2B0F /* Headers */,
+				16EC8A9E5C6A03DAB38683A7351C882E /* Sources */,
+				6FECD38941AB51974CE771B101C9BA72 /* Frameworks */,
+				01AAEAD56863478B021A63A9FDF8CBA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftCheckboxDialog;
+			productName = SwiftCheckboxDialog;
+			productReference = 616006B991C59E1426DC23F770CF3BA9 /* SwiftCheckboxDialog */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2D6035AD24A9D0CB6EC8FED3B198F48 /* Pods-Mentoring */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CC36AEF5F9B52B353FA52B5FB095FCC /* Build configuration list for PBXNativeTarget "Pods-Mentoring" */;
+			buildPhases = (
+				A2BEFB4ED3FC11EA272AC33F4365A02F /* Headers */,
+				874678AEA3BECA30DBAA69661ADE6061 /* Sources */,
+				293D3AC545182EF287010B4A5FA1CE63 /* Frameworks */,
+				0BF8FFA84E9910C38E29835ED9A73537 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE0CC05F26BB58EC69B47032D6C8C300 /* PBXTargetDependency */,
+			);
+			name = "Pods-Mentoring";
+			productName = Pods_Mentoring;
+			productReference = 394D898DDD67C7439DC702B15F2E1F49 /* Pods-Mentoring */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 6C76C6F0303DD00145C4F0FF4F5B9F07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2D6035AD24A9D0CB6EC8FED3B198F48 /* Pods-Mentoring */,
+				5935C285ED9588C594F1CBDEE2C59EA3 /* SwiftCheckboxDialog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01AAEAD56863478B021A63A9FDF8CBA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0BF8FFA84E9910C38E29835ED9A73537 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16EC8A9E5C6A03DAB38683A7351C882E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B2EE49D2D9943CC6D806C0B69F74B66 /* CheckboxDialogViewController.swift in Sources */,
+				E5AEF187B8492A86C915AAA6A2FCA5FC /* CheckboxViewCell.swift in Sources */,
+				1D20A9C7D514C6E70A1417549706B968 /* String.swift in Sources */,
+				53DA4E9F3C0E5F3C3848BF8E86345580 /* SwiftCheckboxDialog-dummy.m in Sources */,
+				7275D5D3D8E8EBE80AF8FF8C600B2FD6 /* UIColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		874678AEA3BECA30DBAA69661ADE6061 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				969ED07D0847DA900C8375490F7FE2ED /* Pods-Mentoring-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE0CC05F26BB58EC69B47032D6C8C300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCheckboxDialog;
+			target = 5935C285ED9588C594F1CBDEE2C59EA3 /* SwiftCheckboxDialog */;
+			targetProxy = 1271B47BCDF060A64E9E1B673772D4F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		22B693E0D3C38F270F9D761F7DC001F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DFD3CCCE345C56BDC436E6978839CBD /* SwiftCheckboxDialog.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCheckboxDialog/SwiftCheckboxDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCheckboxDialog/SwiftCheckboxDialog-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftCheckboxDialog/SwiftCheckboxDialog.modulemap";
+				PRODUCT_MODULE_NAME = SwiftCheckboxDialog;
+				PRODUCT_NAME = SwiftCheckboxDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		6479BF7D2C0CDE5CD792A1963484072F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 012BB0D57AE2EFF766C75AE63D43AF00 /* Pods-Mentoring.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Mentoring/Pods-Mentoring-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mentoring/Pods-Mentoring.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8E0A68F1CCA543A524DCB7536F5294B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 987548C6A4873CC15DCE2DED4B53F80C /* SwiftCheckboxDialog.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCheckboxDialog/SwiftCheckboxDialog-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCheckboxDialog/SwiftCheckboxDialog-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftCheckboxDialog/SwiftCheckboxDialog.modulemap";
+				PRODUCT_MODULE_NAME = SwiftCheckboxDialog;
+				PRODUCT_NAME = SwiftCheckboxDialog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9A9CD66C9A1CCDA7CAA8C7C8A22008E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B364A1C1F8B26502A9FBEA6005F03184 /* Pods-Mentoring.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Mentoring/Pods-Mentoring-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Mentoring/Pods-Mentoring.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CC36AEF5F9B52B353FA52B5FB095FCC /* Build configuration list for PBXNativeTarget "Pods-Mentoring" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9A9CD66C9A1CCDA7CAA8C7C8A22008E /* Debug */,
+				6479BF7D2C0CDE5CD792A1963484072F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2E187DC5BB2E8B00EAB301E8CA36CFA /* Build configuration list for PBXNativeTarget "SwiftCheckboxDialog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E0A68F1CCA543A524DCB7536F5294B1 /* Debug */,
+				22B693E0D3C38F270F9D761F7DC001F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
