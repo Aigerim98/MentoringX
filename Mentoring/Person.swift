@@ -13,7 +13,7 @@ struct Person {
     var city: String?
     var IIN: String?
     var role: String
-    var dateOfBirthday: String
+    var dateOfBirthday: String?
     var school: String?
     var graduationYear: String?
 }

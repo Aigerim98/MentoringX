@@ -10,16 +10,27 @@ import SwiftCheckboxDialog
 
 class FormViewController: UIViewController {
 
-    var person: Person
+    var person: Person!
     
     private var checkboxDialogViewController: CheckboxDialogViewController!
     
     typealias TranslationTuple = (name: String, translated: String)
     typealias TranslationDictionary = [String : String]
     
+    @IBOutlet weak var universityTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var iinTextField: UITextField!
+    @IBOutlet weak var schoolTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    
+    @IBOutlet weak var majorButton: UIButton!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var createAccountButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpUI()
+        
     }
     
     @IBAction func majorButtonTapped(_ sender: UIButton) {
@@ -40,7 +51,21 @@ class FormViewController: UIViewController {
         self.present(self.checkboxDialogViewController, animated: false, completion: nil)
     }
     
-    
+    @IBAction func createAcoountButtonTapped(_ sender: UIButton) {
+    }
+    private func setUpUI() {
+        Utilities.styleTextField(cityTextField)
+        Utilities.styleTextField(phoneTextField)
+        Utilities.styleTextField(iinTextField)
+        Utilities.styleTextField(schoolTextField)
+        Utilities.styleTextField(universityTextField)
+        Utilities.styleHollowButton(majorButton)
+        Utilities.styleFilledButton(createAccountButton)
+        
+        if person.role == "Mentee" {
+            universityTextField.isUserInteractionEnabled = false
+        }
+    }
 }
 
 extension FormViewController: CheckboxDialogViewDelegate {

@@ -30,7 +30,7 @@
                                         </constraints>
                                         <color key="tintColor" red="0.36078432199999999" green="0.2588235438" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Create account"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                         <connections>
                                             <action selector="createAccountTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zLL-nb-fA3"/>
                                         </connections>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339.1304347826087" y="-83.035714285714278"/>
+            <point key="canvasLocation" x="1228" y="-83"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="Bue-bq-h3l">
@@ -156,12 +156,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqL-wV-Xfh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-83"/>
+            <point key="canvasLocation" x="1945" y="-83"/>
         </scene>
         <!--Form View Controller-->
         <scene sceneID="3MK-6F-HQR">
             <objects>
-                <viewController storyboardIdentifier="FormViewController" id="Rb9-Qx-h0V" customClass="FormViewController" customModule="Mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FormViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rb9-Qx-h0V" customClass="FormViewController" customModule="Mentoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vuu-P0-2A3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +173,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please fill all fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFN-q4-fUN">
-                                                <rect key="frame" x="26" y="8" width="185" height="37"/>
+                                                <rect key="frame" x="26" y="8" width="163" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="8Fs-zv-ROa"/>
                                                 </constraints>
@@ -244,21 +244,35 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="JRz-Rs-NMF">
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="JRz-Rs-NMF">
                                                         <rect key="frame" x="0.0" y="438" width="334" height="216"/>
                                                     </datePicker>
                                                 </subviews>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKC-SP-fga">
+                                                <rect key="frame" x="40" y="759" width="334" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="B7v-La-yvo"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Create account"/>
+                                                <connections>
+                                                    <action selector="createAcoountButtonTapped:" destination="Rb9-Qx-h0V" eventType="touchUpInside" id="coo-u4-He9"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="JTT-6C-09Z" firstAttribute="top" secondItem="yFN-q4-fUN" secondAttribute="bottom" constant="40" id="27I-fp-tRg"/>
+                                            <constraint firstItem="wKC-SP-fga" firstAttribute="leading" secondItem="v2S-ly-2Jq" secondAttribute="leading" constant="40" id="D5T-pb-0hN"/>
                                             <constraint firstItem="yFN-q4-fUN" firstAttribute="top" secondItem="v2S-ly-2Jq" secondAttribute="top" constant="8" id="DIi-xo-Fdb"/>
                                             <constraint firstAttribute="height" constant="1000" id="IGF-XV-WW5"/>
                                             <constraint firstAttribute="trailing" secondItem="JTT-6C-09Z" secondAttribute="trailing" constant="40" id="i2L-zI-QKS"/>
                                             <constraint firstItem="yFN-q4-fUN" firstAttribute="leading" secondItem="v2S-ly-2Jq" secondAttribute="leading" constant="26" id="iOM-sc-J7z"/>
+                                            <constraint firstItem="wKC-SP-fga" firstAttribute="top" secondItem="JTT-6C-09Z" secondAttribute="bottom" constant="20" id="nR9-SG-Ugl"/>
                                             <constraint firstItem="JTT-6C-09Z" firstAttribute="leading" secondItem="v2S-ly-2Jq" secondAttribute="leading" constant="40" id="rh6-k9-vtT"/>
-                                            <constraint firstAttribute="trailing" secondItem="yFN-q4-fUN" secondAttribute="trailing" constant="203" id="xvy-EL-4gT"/>
+                                            <constraint firstAttribute="trailing" secondItem="wKC-SP-fga" secondAttribute="trailing" constant="40" id="uA1-Fv-5lq"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yFN-q4-fUN" secondAttribute="trailing" constant="20" symbolic="YES" id="xvy-EL-4gT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -282,10 +296,44 @@
                             <constraint firstItem="Y0d-67-y0f" firstAttribute="top" secondItem="L4K-KU-1K4" secondAttribute="top" id="thz-oQ-fzc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="Ahx-ib-Ceq" id="z4V-hk-TMg"/>
+                        <outlet property="createAccountButton" destination="wKC-SP-fga" id="9p1-W7-Mw6"/>
+                        <outlet property="datePicker" destination="JRz-Rs-NMF" id="n36-ES-V7o"/>
+                        <outlet property="iinTextField" destination="huu-bV-Oxr" id="W0A-f5-N2t"/>
+                        <outlet property="majorButton" destination="17R-UD-ofX" id="gcD-tV-W8R"/>
+                        <outlet property="phoneTextField" destination="hdp-PJ-SA2" id="Mw3-vt-pCY"/>
+                        <outlet property="schoolTextField" destination="dOC-Hx-bnX" id="wVx-cC-lSW"/>
+                        <outlet property="universityTextField" destination="huu-bV-Oxr" id="y7S-8V-KkD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SX-GJ-RSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="-83"/>
+            <point key="canvasLocation" x="2641" y="-83"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="CjW-9t-Kai">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="I7v-WH-1g9" customClass="LoginViewController" customModule="Mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="moB-M2-Xai">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftw-Vu-Ayz">
+                                <rect key="frame" x="186" y="316" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KDZ-ls-UHE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xon-eO-o66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3357" y="-83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MMK-dY-w9O">

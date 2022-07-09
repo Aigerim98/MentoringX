@@ -9,7 +9,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    private var person: Person!
+   // private var person: Person!
     
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var emailTextField: UITextField!
@@ -29,9 +29,9 @@ class SignUpViewController: UIViewController {
     @IBAction func segmentedControlAction(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
-            person.role = "Mentor"
+           print("Mentor")
         case 1:
-            person.role = "Mentee"
+            print("Mentee")
         default:
             break
         }
@@ -44,12 +44,11 @@ class SignUpViewController: UIViewController {
             showError(error!)
         }else {
             hideError()
-            person.name = nameTextField.text!
-            person.email = emailTextField.text!
+            let person = Person(name: nameTextField.text!, email: emailTextField.text!, role: "Mentee")
     
             let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
             vc.person = person
-            vc.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
