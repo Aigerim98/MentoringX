@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Mentoring/Pods-Mentoring-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Chatto/Chatto.framework
+${BUILT_PRODUCTS_DIR}/ChattoAdditions/ChattoAdditions.framework
 ${BUILT_PRODUCTS_DIR}/SwiftCheckboxDialog/SwiftCheckboxDialog.framework

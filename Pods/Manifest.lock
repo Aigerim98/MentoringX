@@ -1,16 +1,25 @@
 PODS:
+  - Chatto (4.1.0)
+  - ChattoAdditions (4.1.0):
+    - Chatto (= 4.1.0)
   - SwiftCheckboxDialog (1.0.1)
 
 DEPENDENCIES:
+  - Chatto (= 4.1.0)
+  - ChattoAdditions (= 4.1.0)
   - SwiftCheckboxDialog
 
 SPEC REPOS:
   trunk:
+    - Chatto
+    - ChattoAdditions
     - SwiftCheckboxDialog
 
 SPEC CHECKSUMS:
+  Chatto: dae34c377e0eca8bdcfe7a05a4d79d55eaccec3e
+  ChattoAdditions: 101f0ee674f16ecdf4177939b7ce9271ea732999
   SwiftCheckboxDialog: edfabc33371022c5c6ab0527a04b4d0f84bbe034
 
-PODFILE CHECKSUM: aa0ed07c9118acb686471d27a0351e0b3328043b
+PODFILE CHECKSUM: c6805881db2269c4bcf041284e8adc76297d038b
 
 COCOAPODS: 1.11.3
