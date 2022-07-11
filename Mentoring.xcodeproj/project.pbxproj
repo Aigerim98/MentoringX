@@ -14,6 +14,8 @@
 		02040A2E287812A3008DCD52 /* Mentoring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02040A2C287812A3008DCD52 /* Mentoring.xcdatamodeld */; };
 		02040A30287812A4008DCD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02040A2F287812A4008DCD52 /* Assets.xcassets */; };
 		02040A33287812A4008DCD52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02040A31287812A4008DCD52 /* LaunchScreen.storyboard */; };
+		022CB1D8287C5C1700A8F879 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */; };
+		022CB1DA287C5C7000A8F879 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CB1D9287C5C7000A8F879 /* ProfileViewController.swift */; };
 		02670431287833290013D499 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670430287833290013D499 /* Utilities.swift */; };
 		02670434287836EA0013D499 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670433287836EA0013D499 /* SignUpViewController.swift */; };
 		02670438287842FC0013D499 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670437287842FC0013D499 /* Person.swift */; };
@@ -42,6 +44,8 @@
 		02040A2F287812A4008DCD52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02040A32287812A4008DCD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02040A34287812A4008DCD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		022CB1D9287C5C7000A8F879 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		02670430287833290013D499 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		02670433287836EA0013D499 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		02670437287842FC0013D499 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				39DDDD312879C1B2009D742A /* ChatViewController.swift */,
 				39DDDD36287B3974009D742A /* FriendsViewController.swift */,
 				029F045F287C146200183946 /* FindMentorViewController.swift */,
+				022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */,
+				022CB1D9287C5C7000A8F879 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 			files = (
 				029F0455287BD8D900183946 /* Chat.swift in Sources */,
 				0267043A2878559F0013D499 /* FormViewController.swift in Sources */,
+				022CB1DA287C5C7000A8F879 /* ProfileViewController.swift in Sources */,
 				39DDDD322879C1B2009D742A /* ChatViewController.swift in Sources */,
 				02670434287836EA0013D499 /* SignUpViewController.swift in Sources */,
 				39DDDD37287B3974009D742A /* FriendsViewController.swift in Sources */,
@@ -293,6 +300,7 @@
 				029F0460287C146200183946 /* FindMentorViewController.swift in Sources */,
 				02040A2E287812A3008DCD52 /* Mentoring.xcdatamodeld in Sources */,
 				029F0464287C1AC300183946 /* OverlayView.swift in Sources */,
+				022CB1D8287C5C1700A8F879 /* CollectionViewCell.swift in Sources */,
 				02040A24287812A3008DCD52 /* AppDelegate.swift in Sources */,
 				02670431287833290013D499 /* Utilities.swift in Sources */,
 				029F045A287BE49700183946 /* NetworkManager.swift in Sources */,

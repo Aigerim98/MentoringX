@@ -32,9 +32,9 @@ class LoginViewController: UIViewController {
             guard let self = self else { return }
                 switch result {
                 case let .success(message):
-                    print(result)
+                    print(message)
                     let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
-                    //vc.person = person
+                    vc.token = message!
                     self.navigationController?.pushViewController(vc, animated: true)
                 case let .failure(error):
                     print(error)

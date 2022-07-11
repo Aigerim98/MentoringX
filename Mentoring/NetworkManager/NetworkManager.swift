@@ -96,6 +96,136 @@ class NetworkManager {
               task.resume()
     }
     
+    func getIsFirstTime(token: String, completion: @escaping (Result<String?, Error>) -> Void) {
+        var components = urlComponents
+        components.path = "/is_first_time"
+              
+        guard let url = components.url else {
+            return
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.httpMethod = "GET"
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    completion(.failure(error!))
+                }
+                    return
+            }
+           
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(APINetworkError.dataNotFound))
+                }
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                DispatchQueue.main.async {
+                    print(response)
+                    completion(.failure(APINetworkError.httpRequestFailed))
+                }
+                return
+            }
+
+            let message = String(data: data, encoding: .utf8)
+                DispatchQueue.main.async {
+                    completion(.success(message))
+                }
+              }
+              task.resume()
+    }
+    
+    func postMajors(token: String, credentials: Majors, completion: @escaping (Result<String?, Error>) -> Void) {
+        var components = urlComponents
+        components.path = "/user_info/majors"
+              
+        guard let url = components.url else {
+            return
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = try? JSONEncoder().encode(credentials)
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    completion(.failure(error!))
+                }
+                    return
+            }
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(APINetworkError.dataNotFound))
+                }
+                return
+            }
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                DispatchQueue.main.async {
+                    print(response)
+                    completion(.failure(APINetworkError.httpRequestFailed))
+                }
+                return
+            }
+
+            let message = String(data: data, encoding: .utf8)
+                DispatchQueue.main.async {
+                    completion(.success(message))
+                }
+            }
+        task.resume()
+    }
+    
+    func postUserInfo(token: String, credentials: UserInfo, completion: @escaping (Result<String?, Error>) -> Void) {
+        print(token)
+        var components = urlComponents
+        components.path = "/user_info"
+              
+        guard let url = components.url else {
+            return
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.httpMethod = "POST"
+        urlRequest.httpBody = try? JSONEncoder().encode(credentials)
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                DispatchQueue.main.async {
+                    completion(.failure(error!))
+                }
+                    return
+            }
+            guard let data = data else {
+                DispatchQueue.main.async {
+                    completion(.failure(APINetworkError.dataNotFound))
+                }
+                return
+            }
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                DispatchQueue.main.async {
+                    print(response)
+                    completion(.failure(APINetworkError.httpRequestFailed))
+                }
+                return
+            }
+
+            let message = String(data: data, encoding: .utf8)
+                DispatchQueue.main.async {
+                    completion(.success(message))
+                }
+        }
+              task.resume()
+    }
     func postRegister(credentials: Registration, completion: @escaping (Result<String?, Error>) -> Void) {
         var components = urlComponents
         components.path = "/register"
