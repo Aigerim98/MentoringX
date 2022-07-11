@@ -12,6 +12,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var emailTextField: UITextField!
+    
+    private let networkManager: NetworkManager = .shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

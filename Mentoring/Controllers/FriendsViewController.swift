@@ -38,6 +38,7 @@ extension FriendsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
         vc.title = "Chat"
+        vc.isNewConversation = true
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

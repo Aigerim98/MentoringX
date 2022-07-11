@@ -16,12 +16,14 @@
 		02040A33287812A4008DCD52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02040A31287812A4008DCD52 /* LaunchScreen.storyboard */; };
 		02670431287833290013D499 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670430287833290013D499 /* Utilities.swift */; };
 		02670434287836EA0013D499 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670433287836EA0013D499 /* SignUpViewController.swift */; };
-		02670436287839FF0013D499 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670435287839FF0013D499 /* GradientButton.swift */; };
 		02670438287842FC0013D499 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670437287842FC0013D499 /* Person.swift */; };
 		0267043A2878559F0013D499 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026704392878559F0013D499 /* FormViewController.swift */; };
+		029F0455287BD8D900183946 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0454287BD8D900183946 /* Chat.swift */; };
+		029F0457287BDBEA00183946 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0456287BDBEA00183946 /* DatabaseManager.swift */; };
+		029F045A287BE49700183946 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0459287BE49700183946 /* NetworkManager.swift */; };
+		029F045C287BE5A700183946 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F045B287BE5A700183946 /* Registration.swift */; };
 		39DDDD3028796A6B009D742A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDDD2F28796A6B009D742A /* LoginViewController.swift */; };
 		39DDDD322879C1B2009D742A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDDD312879C1B2009D742A /* ChatViewController.swift */; };
-		39DDDD35287B3319009D742A /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 39DDDD34287B3319009D742A /* MessageKit */; };
 		39DDDD37287B3974009D742A /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDDD36287B3974009D742A /* FriendsViewController.swift */; };
 		CF616147407F31EB67F3F198 /* Pods_Mentoring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21760F65A0B4C637095DDD29 /* Pods_Mentoring.framework */; };
 /* End PBXBuildFile section */
@@ -38,9 +40,12 @@
 		02040A34287812A4008DCD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02670430287833290013D499 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		02670433287836EA0013D499 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		02670435287839FF0013D499 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		02670437287842FC0013D499 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		026704392878559F0013D499 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		029F0454287BD8D900183946 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		029F0456287BDBEA00183946 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		029F0459287BE49700183946 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		029F045B287BE5A700183946 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		21760F65A0B4C637095DDD29 /* Pods_Mentoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mentoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DDDD2F28796A6B009D742A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39DDDD312879C1B2009D742A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +60,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF616147407F31EB67F3F198 /* Pods_Mentoring.framework in Frameworks */,
-				39DDDD35287B3319009D742A /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,8 @@
 		02040A22287812A3008DCD52 /* Mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				029F0458287BE48000183946 /* NetworkManager */,
+				029F0453287BD8C100183946 /* Models */,
 				026704322878362E0013D499 /* Controllers */,
 				02040A23287812A3008DCD52 /* AppDelegate.swift */,
 				02040A25287812A3008DCD52 /* SceneDelegate.swift */,
@@ -92,8 +98,6 @@
 				02040A34287812A4008DCD52 /* Info.plist */,
 				02040A2C287812A3008DCD52 /* Mentoring.xcdatamodeld */,
 				02670430287833290013D499 /* Utilities.swift */,
-				02670435287839FF0013D499 /* GradientButton.swift */,
-				02670437287842FC0013D499 /* Person.swift */,
 			);
 			path = Mentoring;
 			sourceTree = "<group>";
@@ -109,6 +113,25 @@
 				39DDDD36287B3974009D742A /* FriendsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		029F0453287BD8C100183946 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02670437287842FC0013D499 /* Person.swift */,
+				029F0454287BD8D900183946 /* Chat.swift */,
+				029F045B287BE5A700183946 /* Registration.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		029F0458287BE48000183946 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				029F0456287BDBEA00183946 /* DatabaseManager.swift */,
+				029F0459287BE49700183946 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		1E1601D832462DC1072FFD74 /* Pods */ = {
@@ -147,7 +170,6 @@
 			);
 			name = Mentoring;
 			packageProductDependencies = (
-				39DDDD34287B3319009D742A /* MessageKit */,
 			);
 			productName = Mentoring;
 			productReference = 02040A20287812A3008DCD52 /* Mentoring.app */;
@@ -178,7 +200,6 @@
 			);
 			mainGroup = 02040A17287812A3008DCD52;
 			packageReferences = (
-				39DDDD33287B3319009D742A /* XCRemoteSwiftPackageReference "MessageKit" */,
 			);
 			productRefGroup = 02040A21287812A3008DCD52 /* Products */;
 			projectDirPath = "";
@@ -249,17 +270,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029F0455287BD8D900183946 /* Chat.swift in Sources */,
 				0267043A2878559F0013D499 /* FormViewController.swift in Sources */,
-				02670436287839FF0013D499 /* GradientButton.swift in Sources */,
 				39DDDD322879C1B2009D742A /* ChatViewController.swift in Sources */,
 				02670434287836EA0013D499 /* SignUpViewController.swift in Sources */,
 				39DDDD37287B3974009D742A /* FriendsViewController.swift in Sources */,
+				029F0457287BDBEA00183946 /* DatabaseManager.swift in Sources */,
 				02040A28287812A3008DCD52 /* ViewController.swift in Sources */,
 				02040A2E287812A3008DCD52 /* Mentoring.xcdatamodeld in Sources */,
 				02040A24287812A3008DCD52 /* AppDelegate.swift in Sources */,
 				02670431287833290013D499 /* Utilities.swift in Sources */,
+				029F045A287BE49700183946 /* NetworkManager.swift in Sources */,
 				02670438287842FC0013D499 /* Person.swift in Sources */,
 				39DDDD3028796A6B009D742A /* LoginViewController.swift in Sources */,
+				029F045C287BE5A700183946 /* Registration.swift in Sources */,
 				02040A26287812A3008DCD52 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,25 +505,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		39DDDD33287B3319009D742A /* XCRemoteSwiftPackageReference "MessageKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MessageKit/MessageKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		39DDDD34287B3319009D742A /* MessageKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 39DDDD33287B3319009D742A /* XCRemoteSwiftPackageReference "MessageKit" */;
-			productName = MessageKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		02040A2C287812A3008DCD52 /* Mentoring.xcdatamodeld */ = {

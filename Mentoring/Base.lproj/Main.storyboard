@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1S-zA-pFg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l2R-mw-FJ2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -309,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7SX-GJ-RSV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="-83"/>
+            <point key="canvasLocation" x="3519" y="-83"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="CjW-9t-Kai">
@@ -371,9 +371,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xon-eO-o66" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3357" y="-83"/>
+            <point key="canvasLocation" x="2772" y="-83"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="fHl-cs-0rN">
             <objects>
                 <viewController id="DH2-rb-4d3" sceneMemberID="viewController">
@@ -383,17 +383,17 @@
                         <viewLayoutGuide key="safeArea" id="r2k-6z-dpK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="cVt-E7-TCT"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="cVt-E7-TCT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6W5-uw-RUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6646" y="-207"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="yJr-lJ-NTv">
             <objects>
                 <navigationController id="bdZ-xy-vWb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aMt-vl-1Gt"/>
+                    <tabBarItem key="tabBarItem" title="" image="message" catalog="system" id="aMt-vl-1Gt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xnU-P3-163">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -501,6 +501,8 @@
     </scenes>
     <resources>
         <image name="23" width="900" height="538"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

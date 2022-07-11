@@ -1,25 +1,26 @@
 PODS:
-  - Chatto (4.1.0)
-  - ChattoAdditions (4.1.0):
-    - Chatto (= 4.1.0)
+  - InputBarAccessoryView (5.5.0):
+    - InputBarAccessoryView/Core (= 5.5.0)
+  - InputBarAccessoryView/Core (5.5.0)
+  - MessageKit (3.8.0):
+    - InputBarAccessoryView (~> 5.5.0)
   - SwiftCheckboxDialog (1.0.1)
 
 DEPENDENCIES:
-  - Chatto (= 4.1.0)
-  - ChattoAdditions (= 4.1.0)
+  - MessageKit
   - SwiftCheckboxDialog
 
 SPEC REPOS:
   trunk:
-    - Chatto
-    - ChattoAdditions
+    - InputBarAccessoryView
+    - MessageKit
     - SwiftCheckboxDialog
 
 SPEC CHECKSUMS:
-  Chatto: dae34c377e0eca8bdcfe7a05a4d79d55eaccec3e
-  ChattoAdditions: 101f0ee674f16ecdf4177939b7ce9271ea732999
+  InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
+  MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   SwiftCheckboxDialog: edfabc33371022c5c6ab0527a04b4d0f84bbe034
 
-PODFILE CHECKSUM: c6805881db2269c4bcf041284e8adc76297d038b
+PODFILE CHECKSUM: f8ff09d69926e21d0f7616905eb04d988b4a6af9
 
 COCOAPODS: 1.11.3

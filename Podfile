@@ -8,8 +8,6 @@ target 'Mentoring' do
 
   # Pods for Mentoring
   pod 'SwiftCheckboxDialog'
-  # Swift 5
-  pod 'Chatto', '= 4.1.0'
-  pod 'ChattoAdditions', '= 4.1.0' # if you want to use the cells or the input component
+  pod 'MessageKit'
   
 end

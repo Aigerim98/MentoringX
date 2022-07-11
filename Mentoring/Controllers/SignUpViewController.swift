@@ -21,6 +21,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var singUpButton: UIButton!
     
+    private let networkManager: NetworkManager = .shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -46,9 +48,39 @@ class SignUpViewController: UIViewController {
             hideError()
             let person = Person(name: nameTextField.text!, email: emailTextField.text!, role: "Mentee")
     
-            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
-            vc.person = person
-            self.navigationController?.pushViewController(vc, animated: true)
+            let fullName = nameTextField.text!
+            let email = emailTextField.text!
+            let password = passwordTextField.text!
+            
+            let credentials = Registration(fullName: fullName, email: email, password: password, role: 1)
+            
+            networkManager.postRegister(credentials: credentials) { [weak self] result in
+                guard let self = self else { return }
+                    switch result {
+                    case let .success(message):
+                        print(message)
+                        //self.navigationController?.popToRootViewController(animated: true)
+                    case let .failure(error):
+                        print(error)
+                    }
+            }
+            
+            let verificationCredentials = ProcessRegistration(email: email)
+            
+            networkManager.postRegisterVerification(credentials: verificationCredentials) { [weak self] result in
+                guard let self = self else { return }
+                    switch result {
+                    case let .success(message):
+                        print(message)
+                        self.navigationController?.popToRootViewController(animated: true)
+                    case let .failure(error):
+                        print(error)
+                    }
+            }
+            
+//            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
+//            vc.person = person
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
