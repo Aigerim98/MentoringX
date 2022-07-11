@@ -63,9 +63,9 @@ class FormViewController: UIViewController {
         Utilities.styleHollowButton(majorButton)
         Utilities.styleFilledButton(createAccountButton)
         
-        if person.role == "Mentee" {
-            universityTextField.isUserInteractionEnabled = false
-        }
+//        if person.role == "Mentee" {
+//            universityTextField.isUserInteractionEnabled = false
+//        }
     }
 }
 

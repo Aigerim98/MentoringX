@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     private let networkManager: NetworkManager = .shared
-    
+    var data: String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +22,24 @@ class LoginViewController: UIViewController {
     }
         
     @IBAction func loginButtonTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text, emailTextField.hasText else { return }
         
+        guard let password = passwordTextField.text, passwordTextField.hasText else { return }
+        
+        let credentials = Login(email: email, password: password)
+        
+        networkManager.postLogin(credentials: credentials) { [weak self] result in
+            guard let self = self else { return }
+                switch result {
+                case let .success(message):
+                    print(result)
+                    let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
+                    //vc.person = person
+                    self.navigationController?.pushViewController(vc, animated: true)
+                case let .failure(error):
+                    print(error)
+                }
+        }
     }
     
     private func setUpUI() {

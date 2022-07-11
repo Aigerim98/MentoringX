@@ -9,5 +9,5 @@ target 'Mentoring' do
   # Pods for Mentoring
   pod 'SwiftCheckboxDialog'
   pod 'MessageKit'
-  
+  pod 'Koloda'
 end

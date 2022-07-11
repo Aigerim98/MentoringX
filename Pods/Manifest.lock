@@ -2,25 +2,33 @@ PODS:
   - InputBarAccessoryView (5.5.0):
     - InputBarAccessoryView/Core (= 5.5.0)
   - InputBarAccessoryView/Core (5.5.0)
+  - Koloda (5.0.1):
+    - pop (~> 1.0)
   - MessageKit (3.8.0):
     - InputBarAccessoryView (~> 5.5.0)
+  - pop (1.0.12)
   - SwiftCheckboxDialog (1.0.1)
 
 DEPENDENCIES:
+  - Koloda
   - MessageKit
   - SwiftCheckboxDialog
 
 SPEC REPOS:
   trunk:
     - InputBarAccessoryView
+    - Koloda
     - MessageKit
+    - pop
     - SwiftCheckboxDialog
 
 SPEC CHECKSUMS:
   InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
+  Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SwiftCheckboxDialog: edfabc33371022c5c6ab0527a04b4d0f84bbe034
 
-PODFILE CHECKSUM: f8ff09d69926e21d0f7616905eb04d988b4a6af9
+PODFILE CHECKSUM: cdd44682dcf3c098970f8565a3ffded3769f0587
 
 COCOAPODS: 1.11.3

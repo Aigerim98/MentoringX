@@ -46,7 +46,6 @@ class SignUpViewController: UIViewController {
             showError(error!)
         }else {
             hideError()
-            let person = Person(name: nameTextField.text!, email: emailTextField.text!, role: "Mentee")
     
             let fullName = nameTextField.text!
             let email = emailTextField.text!
