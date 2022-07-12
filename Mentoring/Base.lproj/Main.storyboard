@@ -503,15 +503,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="News" id="IX7-zW-eEH">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="bBi-WV-NJ8">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2Xn-9f-n6A">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="2Fr-RE-qvT">
                             <connections>
-                                <action selector="addNews:" destination="hdE-8k-ZDX" id="o1z-wf-svi"/>
+                                <action selector="addNews:" destination="hdE-8k-ZDX" id="13Q-1e-gNh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -521,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDm-jE-36c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6911.594202898551" y="-1304.4642857142856"/>
+            <point key="canvasLocation" x="6806" y="-1304"/>
         </scene>
         <!--Add News View Controller-->
         <scene sceneID="mt9-jy-QSu">
@@ -585,10 +579,16 @@
                             <constraint firstItem="Tss-DR-CQO" firstAttribute="trailing" secondItem="L3b-rO-YER" secondAttribute="trailing" constant="20" id="xBQ-b3-ah2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="fullNameLabel" destination="chS-dA-cu6" id="X3B-Ba-Bdh"/>
+                        <outlet property="schoolLabel" destination="Mb1-As-Z4L" id="rUg-Yj-a4r"/>
+                        <outlet property="textView" destination="L3b-rO-YER" id="r1v-bA-TiR"/>
+                        <outlet property="universityLabel" destination="ip2-0z-MFP" id="Edm-m1-on2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hip-Ov-AyU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7686.9565217391309" y="-1375.4464285714284"/>
+            <point key="canvasLocation" x="7589.8550724637689" y="-1355.3571428571429"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="5ug-FW-S1g">
@@ -889,7 +889,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rvw-6Y-yGq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7541" y="-710"/>
+            <point key="canvasLocation" x="7529" y="-678"/>
         </scene>
         <!--Friends View Controller-->
         <scene sceneID="64v-DU-dna">
@@ -930,7 +930,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ri8-wF-oHR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8307" y="-710"/>
+            <point key="canvasLocation" x="8307" y="-678"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="wKg-aN-zQ6">
@@ -945,7 +945,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n83-9u-CpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9010" y="-710"/>
+            <point key="canvasLocation" x="9006" y="-678"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="lvv-x3-XOP">

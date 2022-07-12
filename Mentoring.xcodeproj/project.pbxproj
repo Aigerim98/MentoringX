@@ -29,6 +29,7 @@
 		0267138B287DA72D00F4567B /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267138A287DA72D00F4567B /* NewsTableViewCell.swift */; };
 		0267138D287DB98600F4567B /* AddNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267138C287DB98600F4567B /* AddNewsViewController.swift */; };
 		0267138F287DC7A100F4567B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267138E287DC7A100F4567B /* MainTabBarController.swift */; };
+		02671391287DCAD000F4567B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02671390287DCAD000F4567B /* News.swift */; };
 		029F0455287BD8D900183946 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0454287BD8D900183946 /* Chat.swift */; };
 		029F0457287BDBEA00183946 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0456287BDBEA00183946 /* DatabaseManager.swift */; };
 		029F045A287BE49700183946 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0459287BE49700183946 /* NetworkManager.swift */; };
@@ -68,6 +69,7 @@
 		0267138A287DA72D00F4567B /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		0267138C287DB98600F4567B /* AddNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewsViewController.swift; sourceTree = "<group>"; };
 		0267138E287DC7A100F4567B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		02671390287DCAD000F4567B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		029F0454287BD8D900183946 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		029F0456287BDBEA00183946 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		029F0459287BE49700183946 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				029F045B287BE5A700183946 /* Registration.swift */,
 				029F045D287BFA3C00183946 /* Login.swift */,
 				0267137E287D397E00F4567B /* Education.swift */,
+				02671390287DCAD000F4567B /* News.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				022CB1D8287C5C1700A8F879 /* CollectionViewCell.swift in Sources */,
 				0267137D287D389A00F4567B /* TableViewCell.swift in Sources */,
 				02040A24287812A3008DCD52 /* AppDelegate.swift in Sources */,
+				02671391287DCAD000F4567B /* News.swift in Sources */,
 				02670431287833290013D499 /* Utilities.swift in Sources */,
 				02671387287D62D100F4567B /* HomeBottomControlStackView.swift in Sources */,
 				0267138D287DB98600F4567B /* AddNewsViewController.swift in Sources */,

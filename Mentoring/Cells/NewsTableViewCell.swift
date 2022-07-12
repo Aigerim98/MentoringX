@@ -26,14 +26,16 @@ class NewsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with person: Person, news: String){
+    func configure(with person: Person, news: News){
         profileImage.layer.cornerRadius = 40
         guard let university = person.university else { return }
         
         universityLabel.text = university
         schoolLabel.text = person.school
         fullNameLabel.text = person.fullName
-        newsLabel.text = news
+        
+        
+        newsLabel.text = news.news
     }
 
 }

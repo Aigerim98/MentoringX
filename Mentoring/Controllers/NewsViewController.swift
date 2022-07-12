@@ -9,19 +9,23 @@ import UIKit
 
 class NewsViewController: UIViewController {
 
-    var person: Person!
+    //var person: Person!
+    var person: Person = Person(fullName: "Aigerim Abdurakhmanova", email: "aigerim@gmail.com", role: "Mentor", school: "NIS Almaty", phoneNumber: "234567890")
+    
     var education: [Education] = []
     
     private var persons: [Person] = [Person(fullName: "Ant Man", email: "adam@gmail.com", role: "mentor", school: "NIS Astana", graduationYear: "2015", phoneNumber: "123456789", university: "MIT"),
         Person(fullName: "Ant Man", email: "adam@gmail.com", role: "mentor", school: "NIS Astana", graduationYear: "2015", phoneNumber: "123456789", university: "MIT"),
                                      Person(fullName: "Ant Man", email: "adam@gmail.com", role: "mentor", school: "NIS Astana", graduationYear: "2015", phoneNumber: "123456789", university: "MIT")]
                                                                                                                                                                                                     
-    private var news: [String] = ["sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo", "sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo", "sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo" ]
+    private var new: [News] = [News(news: "sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo"), News(news:"sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo"),
+        News(news: "sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo" )]
     
     @IBOutlet private var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(person)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = UITableView.automaticDimension
@@ -30,10 +34,24 @@ class NewsViewController: UIViewController {
     
     
     @IBAction func addNews(_ sender: UIBarButtonItem) {
+        print("add")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddNewsViewController") as! AddNewsViewController
+        vc.person = person
+        vc.delegate = self
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
+
+extension NewsViewController: AddNewDelegate {
+    func addNews(news: News) {
+        new.append(news)
+        persons.append(Person(fullName: person.fullName, email: person.email, role: person.role, phoneNumber: person.phoneNumber, university: "BSc Kazakh - British Technical University, MSc University of Glasgow"))
+        tableView.reloadData()
+        print(news)
+    }
+}
+
 extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
@@ -55,8 +73,8 @@ extension NewsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsTableCell", for: indexPath) as! NewsTableViewCell
-        cell.configure(with: persons[indexPath.section], news: news[indexPath.section])
-       
+//        cell.configure(with: persons[indexPath.section], news: new[indexPath.section].news)
+        cell.configure(with: persons[indexPath.section], news: new[indexPath.section])
         cell.layer.cornerRadius = 5
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
