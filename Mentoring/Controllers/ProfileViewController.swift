@@ -6,48 +6,87 @@
 //
 
 import UIKit
+import HCSStarRatingView
 
 class ProfileViewController: UIViewController {
 
+    var person: Person!
+    
     @IBOutlet var profileImageView: UIImageView!
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var schoolTextLabel: UILabel!
     @IBOutlet var universityTextLabel: UILabel!
+    
     @IBOutlet var collectionView: UICollectionView!
     
+    @IBOutlet var starRating: HCSStarRatingView!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var backgroundView: UIView!
     
     private var majors: [String] = ["Math", "Informatics", "Physics"]
     
-    private var educations: [Education] = [Education(image: "uog.jpg", university: "University of Glasgow", major: "MSc Computer Systems Engineering", yearsOfStudy: "2021 - 2022"), Education(image: "kbtu.jpg", university: "KBTU", major: "BSc Automation and Control", yearsOfStudy: "2015 - 2019")]
+    var educations: [Education] = []
+    
     var screenSize: CGRect!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
     
     override func viewDidLoad() {
         
-        screenSize = view.bounds
-        
-        screenWidth = screenSize.width
-        screenHeight = screenSize.height
+        starRating.value = 4.5
         
         fullNameLabel.text = "Aigerim Abdurakhmanova"
         schoolTextLabel.text = "NIS Almaty"
         universityTextLabel.text = "BSc Kazakh - British Technical University, MSc University of Glasgow"
           
         profileImageView.layer.masksToBounds = true
-        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        profileImageView.layer.cornerRadius = 120
         
-        backgroundView.layer.masksToBounds = true
-        backgroundView.layer.cornerRadius = backgroundView.frame.height / 2
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        gradientView()
     }
     
+    func gradientView() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.backgroundView.bounds
+        //gradientLayer.colors = [UIColor.systemGreen.cgColor, UIColor.white.cgColor]
+        //gradientLayer.colors = [UIColor(hex: "#AAF1DA"), UIColor(hex: "#F9EA8F")]
+        gradientLayer.colors = [UIColor(red: 117/255, green: 239/255, blue: 164/255, alpha: 1).cgColor, UIColor.white.cgColor]
+        self.backgroundView.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+}
+
+extension UIColor {
+    public convenience init?(hex: String) {
+        let r, g, b, a: CGFloat
+
+        if hex.hasPrefix("#") {
+            let start = hex.index(hex.startIndex, offsetBy: 1)
+            let hexColor = String(hex[start...])
+
+            if hexColor.count == 8 {
+                let scanner = Scanner(string: hexColor)
+                var hexNumber: UInt64 = 0
+
+                if scanner.scanHexInt64(&hexNumber) {
+                    r = CGFloat((hexNumber & 0xff000000) >> 24) / 255
+                    g = CGFloat((hexNumber & 0x00ff0000) >> 16) / 255
+                    b = CGFloat((hexNumber & 0x0000ff00) >> 8) / 255
+                    a = CGFloat(hexNumber & 0x000000ff) / 255
+
+                    self.init(red: r, green: g, blue: b, alpha: a)
+                    return
+                }
+            }
+        }
+
+        return nil
+    }
 }
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -59,6 +98,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
         cell.configure(with: majors[indexPath.row])
+        cell.layer.borderColor = UIColor(red: 117/255, green: 239/255, blue: 164/255, alpha: 1).cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
         return cell
     }
     

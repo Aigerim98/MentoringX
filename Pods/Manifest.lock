@@ -1,4 +1,5 @@
 PODS:
+  - HCSStarRatingView (1.5)
   - InputBarAccessoryView (5.5.0):
     - InputBarAccessoryView/Core (= 5.5.0)
   - InputBarAccessoryView/Core (5.5.0)
@@ -10,12 +11,14 @@ PODS:
   - SwiftCheckboxDialog (1.0.1)
 
 DEPENDENCIES:
+  - HCSStarRatingView
   - Koloda
   - MessageKit
   - SwiftCheckboxDialog
 
 SPEC REPOS:
   trunk:
+    - HCSStarRatingView
     - InputBarAccessoryView
     - Koloda
     - MessageKit
@@ -23,12 +26,13 @@ SPEC REPOS:
     - SwiftCheckboxDialog
 
 SPEC CHECKSUMS:
+  HCSStarRatingView: 1d18f79654735514cd6f00e6d90e38cb6320dc31
   InputBarAccessoryView: 1d7b0a672b36e370f01f264b3907ef39d03328e3
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SwiftCheckboxDialog: edfabc33371022c5c6ab0527a04b4d0f84bbe034
 
-PODFILE CHECKSUM: cdd44682dcf3c098970f8565a3ffded3769f0587
+PODFILE CHECKSUM: f597c4a56c1821a59246ad7fe44b9d52583158d9
 
 COCOAPODS: 1.11.3

@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "profilpPage.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "boost_circle@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -17,7 +17,7 @@ struct Person: Encodable, Hashable {
     var school: String?
     var graduationYear: String?
     var phoneNumber: String
-    var university: String
+    var university: String?
 }
 
 struct UserInfo: Encodable {

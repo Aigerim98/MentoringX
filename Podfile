@@ -10,4 +10,5 @@ target 'Mentoring' do
   pod 'SwiftCheckboxDialog'
   pod 'MessageKit'
   pod 'Koloda'
+  pod 'HCSStarRatingView'
 end
