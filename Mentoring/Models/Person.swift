@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person: Encodable {
+struct Person: Encodable, Hashable {
     var fullName: String
     var email: String
     var city: String?
@@ -28,10 +28,6 @@ struct UserInfo: Encodable {
     var dateOfBirth: String
     var iin: String
 }
-
-//struct Major: Encodable {
-//    var major: Int
-//}
 
 struct Majors: Encodable {
     var majors: [Int]

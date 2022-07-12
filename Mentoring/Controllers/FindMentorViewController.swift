@@ -12,6 +12,8 @@ class FindMentorViewController: UIViewController {
 
     @IBOutlet var koloda: KolodaView!
     
+    var persons: [Person: String] = [Person(fullName: "Mentor 1", email: "mentor1@gmail.com", role: "Mentor", phoneNumber: "5678", university: "MIT"): "Math", Person(fullName: "Mentor 2", email: "mentor2@gmail.com", role: "Mentor", phoneNumber: "68790", university: "NU") : "Biology", Person(fullName: "Mentor 3", email: "mentor3@gmail.com", role: "mentor", phoneNumber: "5678", university: "NU") : "Informatics"]
+    
     fileprivate var dataSource: [UIImage] = {
         var array: [UIImage] = []
         for index in 0..<5 {
