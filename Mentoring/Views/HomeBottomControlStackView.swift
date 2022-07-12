@@ -9,19 +9,24 @@ import UIKit
 
 class HomeBottomControlStackView: UIStackView {
 
+    static func createButton(image: UIImage) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFill
+        return button
+    }
+    
+    let undoButton = createButton(image: #imageLiteral(resourceName: "refresh_circle"))
+    let dislikeButton = createButton(image: #imageLiteral(resourceName: "dismiss_circle"))
+    let likeButton = createButton(image: #imageLiteral(resourceName: "like_circle"))
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         distribution = .fillEqually
         heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-        let subviews = [#imageLiteral(resourceName: "dismiss_circle"), #imageLiteral(resourceName: "refresh_circle"), #imageLiteral(resourceName: "like_circle") ].map { (img) -> UIView in
-            let button = UIButton(type: .system)
-            button.setImage(img.withRenderingMode(.alwaysOriginal), for: .normal)
-            return button
-        }
-        
-        subviews.forEach { (v) in
-            addArrangedSubview(v)
+        [undoButton, dislikeButton, likeButton].forEach { (button) in
+            self.addArrangedSubview(button)
         }
     }
     

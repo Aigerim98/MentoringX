@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol CardViewDelegate {
+  //  func didTapMoreInfo(cardViewModel: CardViewModel)
+    func didRemoveCard(cardView: CardView)
+}
+
 class CardView: UIView {
     
     let imageView = UIImageView(image: #imageLiteral(resourceName: "lady5c"))

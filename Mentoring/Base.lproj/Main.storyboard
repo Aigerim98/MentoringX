@@ -398,7 +398,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OGL-BD-481" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6664" y="-281"/>
+            <point key="canvasLocation" x="6629" y="-212"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gap-gr-zmK">
+            <objects>
+                <viewController id="hdE-8k-ZDX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CH6-0t-U7d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="enI-zO-19g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="nzk-gs-ngT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDm-jE-36c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5754" y="-1204"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="NGr-R3-pCQ">
@@ -728,6 +744,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="hdE-8k-ZDX" kind="relationship" relationship="viewControllers" id="S43-C1-HkV"/>
                         <segue destination="jFU-FN-OBd" kind="relationship" relationship="viewControllers" id="4ox-GP-Jsy"/>
                         <segue destination="bdZ-xy-vWb" kind="relationship" relationship="viewControllers" id="CDh-Nn-del"/>
                         <segue destination="brP-zH-smA" kind="relationship" relationship="viewControllers" id="W5i-mf-3Xa"/>
@@ -759,6 +776,7 @@
     <resources>
         <image name="23" width="900" height="538"/>
         <image name="green" width="2000" height="1333"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
