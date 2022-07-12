@@ -9,68 +9,46 @@ import UIKit
 import Koloda
 
 class FindMentorViewController: UIViewController {
-
-    @IBOutlet var koloda: KolodaView!
     
-    var persons: [Person: String] = [Person(fullName: "Mentor 1", email: "mentor1@gmail.com", role: "Mentor", phoneNumber: "5678", university: "MIT"): "Math", Person(fullName: "Mentor 2", email: "mentor2@gmail.com", role: "Mentor", phoneNumber: "68790", university: "NU") : "Biology", Person(fullName: "Mentor 3", email: "mentor3@gmail.com", role: "mentor", phoneNumber: "5678", university: "NU") : "Informatics"]
+    let topStackView = TopNavigationStackView()
+    let cardsDeckView = UIView()
+    let buttonsStackView = HomeBottomControlStackView()
     
-    fileprivate var dataSource: [UIImage] = {
-        var array: [UIImage] = []
-        for index in 0..<5 {
-            array.append(UIImage(named: "Card_like_\(index + 1)")!)
-        }
-        
-        return array
-    }()
+    var persons: [Mentor: String] = [Mentor(fullName: "Mentor 1", email: "mentor1@gmail.com", role: "Mentor", phoneNumber: "5678", university: "MIT", image: "mentor_1"): "Math", Mentor(fullName: "Mentor 2", email: "mentor2@gmail.com", role: "Mentor", phoneNumber: "68790", university: "NU", image: "mentor_2") : "Biology", Mentor(fullName: "Mentor 3", email: "mentor3@gmail.com", role: "mentor", phoneNumber: "5678", university: "NU", image: "mentor_3") : "Informatics"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        koloda.dataSource = self
-        koloda.delegate = self
-
-        self.modalTransitionStyle = UIModalTransitionStyle.flipHorizontal
-    }
-
-    @IBAction func leftButtonTapped(_ sender: Any) {
-        koloda.swipe(.left)
+        setupDummyCards()
+        setupLayout()
     }
     
-    @IBAction func rightButtonTapped(_ sender: Any) {
-        koloda.swipe(.right)
-    }
-}
-
-
-extension FindMentorViewController: KolodaViewDelegate, KolodaViewDataSource {
-    
-    func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        let position = koloda.currentCardIndex
-        for i in 1...4 {
-          dataSource.append(UIImage(named: "Card_like_\(i)")!)
+    fileprivate func setupDummyCards() {
+        persons.forEach { (person) in
+            
+            let cardView = CardView(frame: .zero)
+            cardView.imageView.image = UIImage(named: person.key.image)
+            cardView.informationLabel.text = "\(person.key.fullName) \(person.key.university)\n\(person.value)"
+            
+            let attributedText = NSMutableAttributedString(string: person.key.fullName, attributes: [.font: UIFont.systemFont(ofSize: 32, weight: .heavy)])
+            attributedText.append(NSAttributedString(string: "  \(person.key.university)", attributes: [.font: UIFont.systemFont(ofSize: 24, weight: .regular)]))
+            
+            attributedText.append(NSAttributedString(string: "\n\(person.value)", attributes: [.font: UIFont.systemFont(ofSize: 20, weight: .regular)]))
+            
+            cardView.informationLabel.attributedText = attributedText
+            
+            cardsDeckView.addSubview(cardView)
+            cardView.fillSuperview()
         }
-        koloda.insertCardAtIndexRange(position..<position + 4, animated: true)
     }
     
-    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-        UIApplication.shared.openURL(URL(string: "https://yalantis.com/")!)
+    fileprivate func setupLayout() {
+        let overallStackView = UIStackView(arrangedSubviews: [topStackView, cardsDeckView, buttonsStackView])
+        overallStackView.axis = .vertical
+        view.addSubview(overallStackView)
+        overallStackView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
+        overallStackView.isLayoutMarginsRelativeArrangement = true
+        overallStackView.layoutMargins = .init(top: 0, left: 12, bottom: 0, right: 12)
+        
+        overallStackView.bringSubviewToFront(cardsDeckView)
     }
-    
-    func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-        return dataSource.count
-    }
-    
-    func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-        return .default
-    }
-    
-    func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
-        return UIImageView(image: dataSource[Int(index)])
-    }
-    
-    func koloda(_ koloda: KolodaView, viewForCardOverlayAt index: Int) -> OverlayView? {
-        return Bundle.main.loadNibNamed("OverlayView", owner: self, options: nil)?[0] as? OverlayView
-    }
-    
 }
-

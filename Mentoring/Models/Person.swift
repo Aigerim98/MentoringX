@@ -32,3 +32,17 @@ struct UserInfo: Encodable {
 struct Majors: Encodable {
     var majors: [Int]
 }
+
+struct Mentor: Hashable {
+    var fullName: String
+    var email: String
+    var city: String?
+    var iin: String?
+    var role: String
+    var dateOfBirthday: String?
+    var school: String?
+    var graduationYear: String?
+    var phoneNumber: String
+    var university: String
+    var image: String
+}

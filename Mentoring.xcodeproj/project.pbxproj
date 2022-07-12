@@ -22,6 +22,9 @@
 		0267043A2878559F0013D499 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026704392878559F0013D499 /* FormViewController.swift */; };
 		0267137D287D389A00F4567B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267137C287D389A00F4567B /* TableViewCell.swift */; };
 		0267137F287D397E00F4567B /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267137E287D397E00F4567B /* Education.swift */; };
+		02671382287D61A000F4567B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02671381287D61A000F4567B /* CardView.swift */; };
+		02671385287D62AD00F4567B /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02671384287D62AD00F4567B /* TopNavigationStackView.swift */; };
+		02671387287D62D100F4567B /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02671386287D62D100F4567B /* HomeBottomControlStackView.swift */; };
 		029F0455287BD8D900183946 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0454287BD8D900183946 /* Chat.swift */; };
 		029F0457287BDBEA00183946 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0456287BDBEA00183946 /* DatabaseManager.swift */; };
 		029F045A287BE49700183946 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0459287BE49700183946 /* NetworkManager.swift */; };
@@ -54,6 +57,9 @@
 		026704392878559F0013D499 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		0267137C287D389A00F4567B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0267137E287D397E00F4567B /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		02671381287D61A000F4567B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		02671384287D62AD00F4567B /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
+		02671386287D62D100F4567B /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		029F0454287BD8D900183946 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		029F0456287BDBEA00183946 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		029F0459287BE49700183946 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 		02040A22287812A3008DCD52 /* Mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				02671383287D620400F4567B /* Cells */,
+				02671380287D618F00F4567B /* Views */,
 				029F0458287BE48000183946 /* NetworkManager */,
 				029F0453287BD8C100183946 /* Models */,
 				026704322878362E0013D499 /* Controllers */,
@@ -130,11 +138,28 @@
 				39DDDD312879C1B2009D742A /* ChatViewController.swift */,
 				39DDDD36287B3974009D742A /* FriendsViewController.swift */,
 				029F045F287C146200183946 /* FindMentorViewController.swift */,
-				022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */,
 				022CB1D9287C5C7000A8F879 /* ProfileViewController.swift */,
-				0267137C287D389A00F4567B /* TableViewCell.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		02671380287D618F00F4567B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02671381287D61A000F4567B /* CardView.swift */,
+				02671384287D62AD00F4567B /* TopNavigationStackView.swift */,
+				02671386287D62D100F4567B /* HomeBottomControlStackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02671383287D620400F4567B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0267137C287D389A00F4567B /* TableViewCell.swift */,
+				022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		029F0453287BD8C100183946 /* Models */ = {
@@ -298,6 +323,7 @@
 				029F0455287BD8D900183946 /* Chat.swift in Sources */,
 				0267043A2878559F0013D499 /* FormViewController.swift in Sources */,
 				0267137F287D397E00F4567B /* Education.swift in Sources */,
+				02671385287D62AD00F4567B /* TopNavigationStackView.swift in Sources */,
 				022CB1DA287C5C7000A8F879 /* ProfileViewController.swift in Sources */,
 				39DDDD322879C1B2009D742A /* ChatViewController.swift in Sources */,
 				02670434287836EA0013D499 /* SignUpViewController.swift in Sources */,
@@ -311,8 +337,10 @@
 				0267137D287D389A00F4567B /* TableViewCell.swift in Sources */,
 				02040A24287812A3008DCD52 /* AppDelegate.swift in Sources */,
 				02670431287833290013D499 /* Utilities.swift in Sources */,
+				02671387287D62D100F4567B /* HomeBottomControlStackView.swift in Sources */,
 				029F045A287BE49700183946 /* NetworkManager.swift in Sources */,
 				02670438287842FC0013D499 /* Person.swift in Sources */,
+				02671382287D61A000F4567B /* CardView.swift in Sources */,
 				39DDDD3028796A6B009D742A /* LoginViewController.swift in Sources */,
 				029F045C287BE5A700183946 /* Registration.swift in Sources */,
 				02040A26287812A3008DCD52 /* SceneDelegate.swift in Sources */,

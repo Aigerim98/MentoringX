@@ -76,12 +76,12 @@ class FormViewController: UIViewController {
     }
     
     @IBAction func majorButtonTapped(_ sender: UIButton) {
-        let tableData :[(name: String, translated: String)] = [("1", "Math"),
-                                                                        ("2", "Physics"),
-                                                                        ("3", "Chemistry"),
-                                                                        ("4", "Biology"),
-                                                                        ("5", "Informatics"),
-                                                                        ("6", "History")]
+        let tableData :[(name: String, translated: String)] = [("0", "Math"),
+                                                                        ("1", "Physics"),
+                                                                        ("2", "Chemistry"),
+                                                                        ("3", "Biology"),
+                                                                        ("4", "Informatics"),
+                                                                        ("5", "History")]
 
         self.checkboxDialogViewController = CheckboxDialogViewController()
         self.checkboxDialogViewController.titleDialog = "Courses"
