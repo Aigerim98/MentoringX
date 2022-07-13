@@ -32,12 +32,13 @@ class LoginViewController: UIViewController {
             guard let self = self else { return }
                 switch result {
                 case let .success(message):
-                    print(message)
-                    let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
+//                    print(message)
+//                    let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
+//                    vc.token = message!
+//                    self.navigationController?.pushViewController(vc, animated: true)
+                    let vc = (self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")) as! MainTabBarController
                     vc.token = message!
-                    self.navigationController?.pushViewController(vc, animated: true)
-//                    let vc = (self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")) as! MainTabBarController
-//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
+                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
                 case let .failure(error):
                     print(error)
                 }

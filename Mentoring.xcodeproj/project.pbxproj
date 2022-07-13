@@ -38,6 +38,12 @@
 		029F0460287C146200183946 /* FindMentorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F045F287C146200183946 /* FindMentorViewController.swift */; };
 		029F0464287C1AC300183946 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F0463287C1AC300183946 /* OverlayView.swift */; };
 		029F0469287C1D7C00183946 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029F0468287C1D7C00183946 /* OverlayView.xib */; };
+		02C3C447287EA6CC00C64448 /* ButtonStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3C446287EA6CC00C64448 /* ButtonStackView.swift */; };
+		02C3C449287EA71C00C64448 /* FindButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3C448287EA71C00C64448 /* FindButton.swift */; };
+		02C3C44F287EA8CF00C64448 /* TinderCardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3C44B287EA8CF00C64448 /* TinderCardOverlay.swift */; };
+		02C3C450287EA8CF00C64448 /* TinderCardFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3C44C287EA8CF00C64448 /* TinderCardFooterView.swift */; };
+		02C3C451287EA8CF00C64448 /* TinderCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3C44D287EA8CF00C64448 /* TinderCardModel.swift */; };
+		02C3C452287EA8CF00C64448 /* TinderCardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C3C44E287EA8CF00C64448 /* TinderCardContentView.swift */; };
 		39DDDD3028796A6B009D742A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDDD2F28796A6B009D742A /* LoginViewController.swift */; };
 		39DDDD322879C1B2009D742A /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDDD312879C1B2009D742A /* ChatViewController.swift */; };
 		39DDDD37287B3974009D742A /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DDDD36287B3974009D742A /* FriendsViewController.swift */; };
@@ -78,6 +84,12 @@
 		029F045F287C146200183946 /* FindMentorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMentorViewController.swift; sourceTree = "<group>"; };
 		029F0463287C1AC300183946 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		029F0468287C1D7C00183946 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		02C3C446287EA6CC00C64448 /* ButtonStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackView.swift; sourceTree = "<group>"; };
+		02C3C448287EA71C00C64448 /* FindButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindButton.swift; sourceTree = "<group>"; };
+		02C3C44B287EA8CF00C64448 /* TinderCardOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TinderCardOverlay.swift; path = ../../../Shuffle/Example/Shuffle/TinderExample/TinderCard/TinderCardOverlay.swift; sourceTree = "<group>"; };
+		02C3C44C287EA8CF00C64448 /* TinderCardFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TinderCardFooterView.swift; path = ../../../Shuffle/Example/Shuffle/TinderExample/TinderCard/TinderCardFooterView.swift; sourceTree = "<group>"; };
+		02C3C44D287EA8CF00C64448 /* TinderCardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TinderCardModel.swift; path = ../../../Shuffle/Example/Shuffle/TinderExample/TinderCard/TinderCardModel.swift; sourceTree = "<group>"; };
+		02C3C44E287EA8CF00C64448 /* TinderCardContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TinderCardContentView.swift; path = ../../../Shuffle/Example/Shuffle/TinderExample/TinderCard/TinderCardContentView.swift; sourceTree = "<group>"; };
 		21760F65A0B4C637095DDD29 /* Pods_Mentoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mentoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DDDD2F28796A6B009D742A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		39DDDD312879C1B2009D742A /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +131,7 @@
 		02040A22287812A3008DCD52 /* Mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				02C3C44A287EA8B200C64448 /* Cards */,
 				02671383287D620400F4567B /* Cells */,
 				02671380287D618F00F4567B /* Views */,
 				029F0458287BE48000183946 /* NetworkManager */,
@@ -162,6 +175,8 @@
 				02671381287D61A000F4567B /* CardView.swift */,
 				02671384287D62AD00F4567B /* TopNavigationStackView.swift */,
 				02671386287D62D100F4567B /* HomeBottomControlStackView.swift */,
+				02C3C446287EA6CC00C64448 /* ButtonStackView.swift */,
+				02C3C448287EA71C00C64448 /* FindButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +211,17 @@
 				029F0459287BE49700183946 /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		02C3C44A287EA8B200C64448 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				02C3C44E287EA8CF00C64448 /* TinderCardContentView.swift */,
+				02C3C44C287EA8CF00C64448 /* TinderCardFooterView.swift */,
+				02C3C44D287EA8CF00C64448 /* TinderCardModel.swift */,
+				02C3C44B287EA8CF00C64448 /* TinderCardOverlay.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 		1E1601D832462DC1072FFD74 /* Pods */ = {
@@ -335,14 +361,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C3C452287EA8CF00C64448 /* TinderCardContentView.swift in Sources */,
 				0267138F287DC7A100F4567B /* MainTabBarController.swift in Sources */,
+				02C3C450287EA8CF00C64448 /* TinderCardFooterView.swift in Sources */,
 				029F0455287BD8D900183946 /* Chat.swift in Sources */,
 				0267043A2878559F0013D499 /* FormViewController.swift in Sources */,
 				0267137F287D397E00F4567B /* Education.swift in Sources */,
+				02C3C451287EA8CF00C64448 /* TinderCardModel.swift in Sources */,
 				02671385287D62AD00F4567B /* TopNavigationStackView.swift in Sources */,
 				022CB1DA287C5C7000A8F879 /* ProfileViewController.swift in Sources */,
 				39DDDD322879C1B2009D742A /* ChatViewController.swift in Sources */,
 				02670434287836EA0013D499 /* SignUpViewController.swift in Sources */,
+				02C3C449287EA71C00C64448 /* FindButton.swift in Sources */,
 				39DDDD37287B3974009D742A /* FriendsViewController.swift in Sources */,
 				0267138B287DA72D00F4567B /* NewsTableViewCell.swift in Sources */,
 				029F0457287BDBEA00183946 /* DatabaseManager.swift in Sources */,
@@ -351,6 +381,7 @@
 				02040A2E287812A3008DCD52 /* Mentoring.xcdatamodeld in Sources */,
 				029F0464287C1AC300183946 /* OverlayView.swift in Sources */,
 				022CB1D8287C5C1700A8F879 /* CollectionViewCell.swift in Sources */,
+				02C3C447287EA6CC00C64448 /* ButtonStackView.swift in Sources */,
 				0267137D287D389A00F4567B /* TableViewCell.swift in Sources */,
 				02040A24287812A3008DCD52 /* AppDelegate.swift in Sources */,
 				02671391287DCAD000F4567B /* News.swift in Sources */,
@@ -358,6 +389,7 @@
 				02671387287D62D100F4567B /* HomeBottomControlStackView.swift in Sources */,
 				0267138D287DB98600F4567B /* AddNewsViewController.swift in Sources */,
 				029F045A287BE49700183946 /* NetworkManager.swift in Sources */,
+				02C3C44F287EA8CF00C64448 /* TinderCardOverlay.swift in Sources */,
 				02671389287D9FC500F4567B /* NewsViewController.swift in Sources */,
 				02670438287842FC0013D499 /* Person.swift in Sources */,
 				02671382287D61A000F4567B /* CardView.swift in Sources */,

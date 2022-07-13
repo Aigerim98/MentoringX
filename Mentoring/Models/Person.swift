@@ -9,13 +9,14 @@ import Foundation
 
 struct Person: Encodable, Hashable, Decodable {
     var fullName: String
-    var email: String
+    //var email: String
     var city: String?
     var iin: String?
-    var role: String
-    var dateOfBirthday: String?
+    var roleID: Int
+    var dateOfBirth: String?
     var school: String?
-    var graduationYear: String?
+    
+  //  var graduationYear: String?
     var phoneNumber: String
     var university: String?
     var aboutMe: String?
@@ -46,4 +47,14 @@ struct Mentor: Hashable {
     var phoneNumber: String
     var university: String
     var image: String
+}
+
+struct MentorIds: Decodable {
+    var ids: [Int]
+}
+
+struct MentorCard: Decodable {
+    var fullName: String
+    var subjectList: [Int]
+    var university: String
 }

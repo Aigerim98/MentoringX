@@ -96,7 +96,94 @@ class NetworkManager {
               task.resume()
     }
     
+    func getMentorsById(id: Int,token: String, completion: @escaping (MentorCard) -> Void) {
+        let queryItem = [URLQueryItem(name: "id", value: String(id))]
+        var components = urlComponents
+        components.path = "/filter_search/get_user_by_id"
+        components.queryItems = queryItem
+        guard let url = components.url else {
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.httpMethod = "GET"
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                print("Error: error calling GET")
+                return
+            }
+           
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print(response)
+                print("Error: HTTP request failed")
+                return
+            }
+            
+            do {
+                let mentorCard = try JSONDecoder().decode(MentorCard.self, from: data)
+                print("data: \(data)")
+                DispatchQueue.main.async {
+                    completion(mentorCard)
+                }
+            }catch {
+                print("no json")
+            }
+        }
+        task.resume()
+    }
+    
+    func getMentorId(token: String, completion: @escaping (MentorIds) -> Void) {
+        var components = urlComponents
+        components.path = "/filter_search/all"
+              
+        guard let url = components.url else {
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.httpMethod = "GET"
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                print("Error: error calling GET")
+                return
+            }
+           
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+            
+            do {
+                let mentorIds = try JSONDecoder().decode(MentorIds.self, from: data)
+
+                DispatchQueue.main.async {
+                    completion(mentorIds)
+                }
+            }catch {
+                print("no json")
+            }
+        }
+        task.resume()
+    }
+    
     func getUserInfo(token: String, completion: @escaping (Person) -> Void) {
+        
         var components = urlComponents
         components.path = "/user_info"
               
@@ -105,7 +192,7 @@ class NetworkManager {
         }
         
         var urlRequest = URLRequest(url: url)
-        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.setValue("application/json", forHTTPHeaderField: "accept")
         urlRequest.setValue(token, forHTTPHeaderField: "token")
         urlRequest.httpMethod = "GET"
         
@@ -136,6 +223,43 @@ class NetworkManager {
            
         }
         task.resume()
+    }
+    
+    func getUserName(token: String, completion: @escaping (String) -> Void) {
+        var components = urlComponents
+        components.path = "/user_info/name"
+        
+        guard let url = components.url else {
+            return
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.httpMethod = "GET"
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                print("Error: error calling GET")
+                    return
+            }
+           
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+
+            let message = String(data: data, encoding: .utf8)
+                DispatchQueue.main.async {
+                    completion(message!)
+                }
+              }
+              task.resume()
     }
     
     func getIsFirstTime(token: String, completion: @escaping (Result<String?, Error>) -> Void) {
@@ -226,7 +350,7 @@ class NetworkManager {
     }
     
     func postUserInfo(token: String, credentials: UserInfo, completion: @escaping (Result<String?, Error>) -> Void) {
-        print(token)
+        
         var components = urlComponents
         components.path = "/user_info"
               

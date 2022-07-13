@@ -10,13 +10,13 @@ import UIKit
 class NewsViewController: UIViewController {
 
     //var person: Person!
-    var person: Person = Person(fullName: "Aigerim Abdurakhmanova", email: "aigerim@gmail.com", role: "Mentor", school: "NIS Almaty", phoneNumber: "234567890")
+    var person: Person = Person(fullName: "Aigerim Abdurakhmanova", roleID: 1, school: "NIS Almaty", phoneNumber: "234567890")
     
     var education: [Education] = []
     
-    private var persons: [Person] = [Person(fullName: "Ant Man", email: "adam@gmail.com", role: "mentor", school: "NIS Astana", graduationYear: "2015", phoneNumber: "123456789", university: "MIT"),
-        Person(fullName: "Ant Man", email: "adam@gmail.com", role: "mentor", school: "NIS Astana", graduationYear: "2015", phoneNumber: "123456789", university: "MIT"),
-                                     Person(fullName: "Ant Man", email: "adam@gmail.com", role: "mentor", school: "NIS Astana", graduationYear: "2015", phoneNumber: "123456789", university: "MIT")]
+    private var persons: [Person] = [Person(fullName: "Ant Man", roleID: 1, school: "NIS Astana",  phoneNumber: "123456789", university: "MIT"),
+        Person(fullName: "Ant Man", roleID: 1, school: "NIS Astana", phoneNumber: "123456789", university: "MIT"),
+                                     Person(fullName: "Ant Man",  roleID: 1, school: "NIS Astana", phoneNumber: "123456789", university: "MIT")]
                                                                                                                                                                                                     
     private var new: [News] = [News(news: "sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo"), News(news:"sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo"),
         News(news: "sdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijosdgfhjkll;lfdrtfyguhijokpiuytrdtfyguhijokplijuhgytfrdfyguhijokpijuhygtfrdughiojkpiuygthijo" )]
@@ -45,8 +45,8 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: AddNewDelegate {
     func addNews(news: News) {
-        new.append(news)
-        persons.append(Person(fullName: person.fullName, email: person.email, role: person.role,school: person.school, phoneNumber: person.phoneNumber, university: "BSc Kazakh - British Technical University, MSc University of Glasgow"))
+//        new.append(news)
+//        persons.append(Person(fullName: person.fullName, email: person.email, roleId: person.role, school: person.school, phoneNumber: person.phoneNumber, university: "BSc Kazakh - British Technical University, MSc University of Glasgow"))
         tableView.reloadData()
         print(news)
     }
