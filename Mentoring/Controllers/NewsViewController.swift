@@ -46,7 +46,7 @@ class NewsViewController: UIViewController {
 extension NewsViewController: AddNewDelegate {
     func addNews(news: News) {
         new.append(news)
-        persons.append(Person(fullName: person.fullName, email: person.email, role: person.role, phoneNumber: person.phoneNumber, university: "BSc Kazakh - British Technical University, MSc University of Glasgow"))
+        persons.append(Person(fullName: person.fullName, email: person.email, role: person.role,school: person.school, phoneNumber: person.phoneNumber, university: "BSc Kazakh - British Technical University, MSc University of Glasgow"))
         tableView.reloadData()
         print(news)
     }

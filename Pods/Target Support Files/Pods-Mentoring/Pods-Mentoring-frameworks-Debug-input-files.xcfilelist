@@ -3,5 +3,7 @@ ${BUILT_PRODUCTS_DIR}/HCSStarRatingView/HCSStarRatingView.framework
 ${BUILT_PRODUCTS_DIR}/InputBarAccessoryView/InputBarAccessoryView.framework
 ${BUILT_PRODUCTS_DIR}/Koloda/Koloda.framework
 ${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework
+${BUILT_PRODUCTS_DIR}/PopBounceButton/PopBounceButton.framework
+${BUILT_PRODUCTS_DIR}/Shuffle-iOS/Shuffle_iOS.framework
 ${BUILT_PRODUCTS_DIR}/SwiftCheckboxDialog/SwiftCheckboxDialog.framework
 ${BUILT_PRODUCTS_DIR}/pop/pop.framework

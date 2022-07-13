@@ -98,14 +98,13 @@ class FormViewController: UIViewController {
         guard let iin = iinTextField.text, iinTextField.hasText else { return }
         guard let phoneNumber = phoneTextField.text, phoneTextField.hasText else { return }
         guard let university = universityTextField.text, universityTextField.hasText else { return }
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         let dateOfBirth = dateFormatter.string(from: datePicker.date)
-        print(dateOfBirth)
-        
+
         let credentials = UserInfo(city: city, school: school, phoneNumber: phoneNumber, university: university, dateOfBirth: dateOfBirth, iin: iin)
-        
+
         networkManager.postUserInfo(token: token!, credentials: credentials) { [weak self] result in
             guard let self = self else { return }
                 switch result {
@@ -115,6 +114,7 @@ class FormViewController: UIViewController {
                     print(error)
                 }
         }
+
         networkManager.postMajors(token: token!, credentials: majors) { [weak self] result in
             guard let self = self else { return }
                 switch result {
@@ -124,7 +124,54 @@ class FormViewController: UIViewController {
                     print(error)
                 }
         }
+        
+//        let sceneDelegate = UIApplication.shared.delegate as! SceneDelegate
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController") as! MainTabBarController
+//        sceneDelegate.window?.rootViewController = vc
+//        sceneDelegate.window?.makeKeyAndVisible()
+        
+        let vc = (self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")) as! MainTabBarController
+        vc.token = token
+        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let city = cityTextField.text, cityTextField.hasText else { return }
+//        guard let iin = iinTextField.text, iinTextField.hasText else { return }
+//        guard let phoneNumber = phoneTextField.text, phoneTextField.hasText else { return }
+//        guard let university = universityTextField.text, universityTextField.hasText else { return }
+//
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd-MM-yyyy"
+//        let dateOfBirth = dateFormatter.string(from: datePicker.date)
+//        print(dateOfBirth)
+//
+//        let credentials = UserInfo(city: city, school: school, phoneNumber: phoneNumber, university: university, dateOfBirth: dateOfBirth, iin: iin)
+//
+//        networkManager.postUserInfo(token: token!, credentials: credentials) { [weak self] result in
+//            guard let self = self else { return }
+//                switch result {
+//                case let .success(message):
+//                    print(message)
+//                case let .failure(error):
+//                    print(error)
+//                }
+//        }
+//
+//        networkManager.postMajors(token: token!, credentials: majors) { [weak self] result in
+//            guard let self = self else { return }
+//                switch result {
+//                case let .success(message):
+//                    print(message)
+//                case let .failure(error):
+//                    print(error)
+//                }
+//        }
+//
+//        if let mainTabBarController = segue.destination as? MainTabBarController {
+//            mainTabBarController.token = token
+//        }
+//    }
     private func setUpUI() {
         Utilities.styleTextField(cityTextField)
         Utilities.styleTextField(phoneTextField)

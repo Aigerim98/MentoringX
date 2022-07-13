@@ -13,6 +13,8 @@ class MainTabBarController: UITabBarController {
     
     var educations: [Education] = [Education(image: "uog.jpg", university: "University of Glasgow", major: "MSc Computer Systems Engineering", yearsOfStudy: "2021 - 2022"), Education(image: "kbtu.jpg", university: "KBTU", major: "BSc Automation and Control", yearsOfStudy: "2015 - 2019")]
     
+    var token: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,7 @@ class MainTabBarController: UITabBarController {
             if let profileViewController = viewController as? ProfileViewController {
                 profileViewController.person = person
                 profileViewController.educations = educations
+                profileViewController.token = token
             }
             
             if let newsViewController = viewController as? NewsViewController {

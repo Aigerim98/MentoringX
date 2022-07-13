@@ -96,6 +96,48 @@ class NetworkManager {
               task.resume()
     }
     
+    func getUserInfo(token: String, completion: @escaping (Person) -> Void) {
+        var components = urlComponents
+        components.path = "/user_info"
+              
+        guard let url = components.url else {
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.httpMethod = "GET"
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                print("Error: error calling GET")
+                return
+            }
+           
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+            do {
+                let person = try JSONDecoder().decode(Person.self, from: data)
+                print("data: \(data)")
+                DispatchQueue.main.async {
+                    completion(person)
+                }
+            }catch {
+                print("no json")
+            }
+           
+        }
+        task.resume()
+    }
+    
     func getIsFirstTime(token: String, completion: @escaping (Result<String?, Error>) -> Void) {
         var components = urlComponents
         components.path = "/is_first_time"

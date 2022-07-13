@@ -18,6 +18,7 @@ class AddNewsViewController: UIViewController {
     var person: Person!
     @IBOutlet var fullNameLabel: UILabel!
     
+    @IBOutlet var profileImage: UIImageView!
     @IBOutlet var universityLabel: UILabel!
     @IBOutlet var schoolLabel: UILabel!
     
@@ -25,6 +26,7 @@ class AddNewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImage.layer.cornerRadius = 46.5
         fullNameLabel.text = person.fullName
         schoolLabel.text = person.school
         universityLabel.text = "BSc Kazakh - British Technical University, MSc University of Glasgow"

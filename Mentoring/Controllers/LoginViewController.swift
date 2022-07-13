@@ -36,6 +36,8 @@ class LoginViewController: UIViewController {
                     let vc =  self.storyboard?.instantiateViewController(withIdentifier: "FormViewController") as! FormViewController
                     vc.token = message!
                     self.navigationController?.pushViewController(vc, animated: true)
+//                    let vc = (self.storyboard?.instantiateViewController(withIdentifier: "MainTabBarController")) as! MainTabBarController
+//                    (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
                 case let .failure(error):
                     print(error)
                 }

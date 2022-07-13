@@ -11,4 +11,7 @@ target 'Mentoring' do
   pod 'MessageKit'
   pod 'Koloda'
   pod 'HCSStarRatingView'
+  pod 'Shuffle-iOS'
+  pod 'PopBounceButton'
+
 end

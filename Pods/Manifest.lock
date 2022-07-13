@@ -8,12 +8,17 @@ PODS:
   - MessageKit (3.8.0):
     - InputBarAccessoryView (~> 5.5.0)
   - pop (1.0.12)
+  - PopBounceButton (1.2.2):
+    - pop (~> 1.0)
+  - Shuffle-iOS (0.5.0)
   - SwiftCheckboxDialog (1.0.1)
 
 DEPENDENCIES:
   - HCSStarRatingView
   - Koloda
   - MessageKit
+  - PopBounceButton
+  - Shuffle-iOS
   - SwiftCheckboxDialog
 
 SPEC REPOS:
@@ -23,6 +28,8 @@ SPEC REPOS:
     - Koloda
     - MessageKit
     - pop
+    - PopBounceButton
+    - Shuffle-iOS
     - SwiftCheckboxDialog
 
 SPEC CHECKSUMS:
@@ -31,8 +38,10 @@ SPEC CHECKSUMS:
   Koloda: d07b9199a383abc5898b62aa945a599f5e7c0c4b
   MessageKit: a1ba0c69ebead94029867853eb44dd05b9b3f453
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  PopBounceButton: 34105a012678222f058f8d2621672724a3d5c9fb
+  Shuffle-iOS: ff33658fb1e5eebd6a4724c156473e63754be9cb
   SwiftCheckboxDialog: edfabc33371022c5c6ab0527a04b4d0f84bbe034
 
-PODFILE CHECKSUM: f597c4a56c1821a59246ad7fe44b9d52583158d9
+PODFILE CHECKSUM: 55d76927e2aba377480c04a996edc1f8da96e2c6
 
 COCOAPODS: 1.11.3

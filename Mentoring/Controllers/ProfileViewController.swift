@@ -26,10 +26,9 @@ class ProfileViewController: UIViewController {
     private var majors: [String] = ["Math", "Informatics", "Physics"]
     
     var educations: [Education] = []
+    var token: String!
     
-    var screenSize: CGRect!
-    var screenWidth: CGFloat!
-    var screenHeight: CGFloat!
+    private var networkManager: NetworkManager = .shared
     
     override func viewDidLoad() {
         
@@ -40,7 +39,7 @@ class ProfileViewController: UIViewController {
         universityTextLabel.text = "BSc Kazakh - British Technical University, MSc University of Glasgow"
           
         profileImageView.layer.masksToBounds = true
-        profileImageView.layer.cornerRadius = 120
+        profileImageView.layer.cornerRadius = 90
         
         super.viewDidLoad()
         collectionView.dataSource = self
@@ -48,6 +47,14 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         gradientView()
+        
+        print("Profile view controller token \(token)")
+    }
+    
+    func loadData() {
+        networkManager.getUserInfo(token: token) { [weak self] person in
+            self?.person = person
+        }
     }
     
     func gradientView() {
@@ -59,6 +66,12 @@ class ProfileViewController: UIViewController {
         self.backgroundView.layer.insertSublayer(gradientLayer, at: 0)
     }
     
+    @IBAction func logOutTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+           let vc = storyboard.instantiateViewController(identifier: "ViewController") as! ViewController
+
+           (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(vc)
+    }
 }
 
 extension UIColor {
