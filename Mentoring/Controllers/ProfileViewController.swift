@@ -80,6 +80,19 @@ class ProfileViewController: UIViewController {
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         print("tapped")
         self.showAlert()
+        
+        guard let image = profileImageView.image else { return }
+        
+        let uploader = ImageUploader(uploadImage: image, number: 1)
+        uploader.uploadImage(token: token) { result in
+            switch result {
+            case .success(let response):
+//                    NotificationCenter.default.post(name: "ProfileEdited", object: nil)
+                print("SUCCESS!")
+            case .failure(let failure):
+                print(failure)
+            }
+        }
     }
     
     @IBAction func editButtonTapped(_ sender: UIButton) {
@@ -152,6 +165,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
                let imagePickerController = UIImagePickerController()
                imagePickerController.delegate = self
                imagePickerController.sourceType = sourceType
+               
                self.present(imagePickerController, animated: true, completion: nil)
            }
        }

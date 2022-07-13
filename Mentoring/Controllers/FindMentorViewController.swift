@@ -19,9 +19,9 @@ class FindMentorViewController: UIViewController {
     var token: String!
     var mentorIds: [Int] = []
     
-    var mentors: [TinderCardModel] = [TinderCardModel(name: "Mentor 1", university: "NU", occupation: "Math", image: UIImage(named: "mentor_1")),
-        TinderCardModel(name: "Mentor 2", university: "MIT", occupation: "Informatics", image: UIImage(named: "mentor_2")),
-                                      TinderCardModel(name: "Mentor 3", university: "NU", occupation: "Math", image: UIImage(named: "mentor_3"))] {
+    var mentors: [TinderCardModel] = [TinderCardModel(id: 1, name: "Mentor 1", university: "NU", occupation: "Math", image: UIImage(named: "mentor_1")),
+                                      TinderCardModel(id: 3,  name: "Mentor 2", university: "MIT", occupation: "Informatics", image: UIImage(named: "mentor_2")),
+                                      TinderCardModel(id: 5,  name: "Mentor 3", university: "NU", occupation: "Math", image: UIImage(named: "mentor_3"))] {
         didSet{
             cardStack.reloadData()
         }
@@ -49,7 +49,7 @@ class FindMentorViewController: UIViewController {
             guard let self = self else { return }
                 for id in ids.ids {
                     self.networkManager.getMentorsById(id: id, token: self.token) { [weak self] mentorCard in
-                        self!.mentors.append(TinderCardModel(name: mentorCard.fullName, university: mentorCard.university, occupation: String(mentorCard.subjectList[0]), image: UIImage(named: "mentor_1")))
+                        self!.mentors.append(TinderCardModel(id: id, name: mentorCard.fullName, university: mentorCard.university, occupation: String(mentorCard.subjectList[0]), image: UIImage(named: "mentor_1")))
                     }
                 }
                 
@@ -139,6 +139,9 @@ extension FindMentorViewController: ButtonStackViewDelegate, SwipeCardStackDataS
 
   func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
     print("Swiped \(direction) on \(mentors[index].name)")
+      networkManager.postLikeMentor(token: token, id: mentors[index].id) { [weak self] result in
+          print(result)
+      }
   }
 
   func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {

@@ -306,6 +306,47 @@ class NetworkManager {
               task.resume()
     }
     
+    func postLikeMentor(token: String, id: Int, completion: @escaping (String) -> Void){
+        let queryItem = [URLQueryItem(name: "matchID", value: String(id))]
+        
+        var components = urlComponents
+        components.path = "/connections/match_from_mentee"
+        components.queryItems = queryItem
+        
+        guard let url = components.url else {
+            return
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.setValue(token, forHTTPHeaderField: "token")
+        urlRequest.setValue("*/*", forHTTPHeaderField: "accept")
+        urlRequest.httpMethod = "POST"
+        
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            guard error == nil else {
+                print("Error: error calling GET")
+                    return
+            }
+           
+            guard let data = data else {
+                print("Error: Did not receive data")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 300) ~= response.statusCode else {
+                print(response)
+                print("Error: HTTP request failed")
+                return
+            }
+
+            let message = String(data: data, encoding: .utf8)
+                DispatchQueue.main.async {
+                    completion(message!)
+                }
+              }
+              task.resume()
+    }
+    
     func postMajors(token: String, credentials: Majors, completion: @escaping (Result<String?, Error>) -> Void) {
         var components = urlComponents
         components.path = "/user_info/majors"

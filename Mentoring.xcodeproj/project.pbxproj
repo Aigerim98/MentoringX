@@ -14,6 +14,7 @@
 		02040A2E287812A3008DCD52 /* Mentoring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02040A2C287812A3008DCD52 /* Mentoring.xcdatamodeld */; };
 		02040A30287812A4008DCD52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02040A2F287812A4008DCD52 /* Assets.xcassets */; };
 		02040A33287812A4008DCD52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02040A31287812A4008DCD52 /* LaunchScreen.storyboard */; };
+		02255E8D287F471D00800BA2 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02255E8C287F471D00800BA2 /* ImageUploader.swift */; };
 		022CB1D8287C5C1700A8F879 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */; };
 		022CB1DA287C5C7000A8F879 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022CB1D9287C5C7000A8F879 /* ProfileViewController.swift */; };
 		02670431287833290013D499 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02670430287833290013D499 /* Utilities.swift */; };
@@ -60,6 +61,7 @@
 		02040A2F287812A4008DCD52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02040A32287812A4008DCD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02040A34287812A4008DCD52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02255E8C287F471D00800BA2 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		022CB1D7287C5C1700A8F879 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		022CB1D9287C5C7000A8F879 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		02670430287833290013D499 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				029F0456287BDBEA00183946 /* DatabaseManager.swift */,
 				029F0459287BE49700183946 /* NetworkManager.swift */,
+				02255E8C287F471D00800BA2 /* ImageUploader.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				02671382287D61A000F4567B /* CardView.swift in Sources */,
 				39DDDD3028796A6B009D742A /* LoginViewController.swift in Sources */,
 				029F045C287BE5A700183946 /* Registration.swift in Sources */,
+				02255E8D287F471D00800BA2 /* ImageUploader.swift in Sources */,
 				02040A26287812A3008DCD52 /* SceneDelegate.swift in Sources */,
 				029F045E287BFA3C00183946 /* Login.swift in Sources */,
 			);
