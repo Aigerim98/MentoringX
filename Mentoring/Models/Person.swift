@@ -53,8 +53,18 @@ struct MentorIds: Decodable {
     var ids: [Int]
 }
 
-struct MentorCard: Decodable {
+struct MenteeIds: Decodable {
+    var ids: [Int]
+}
+
+struct MentorCard: Decodable, Encodable {
     var fullName: String
     var subjectList: [Int]
     var university: String
+}
+
+struct MenteeCards {
+    var fullName: String
+    var subjectList: [Int]
+    var university: String?
 }

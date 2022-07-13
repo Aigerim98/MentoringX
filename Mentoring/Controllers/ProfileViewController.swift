@@ -28,6 +28,7 @@ class ProfileViewController: UIViewController {
     var educations: [Education] = []
     var token: String!
     
+    //1 mentor 2 mentee
     
     private var networkManager: NetworkManager = .shared
     
@@ -36,6 +37,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        loadPhoto()
         
         starRating.value = 4.5
         
@@ -73,7 +75,24 @@ class ProfileViewController: UIViewController {
         networkManager.getUserName(token: token!) { [weak self] name in
             print("name \(name)")
             self?.fullNameLabel.text = name
+            
         }
+    }
+    
+    func loadPhoto() {
+        networkManager.getPhotoTemp(id: 2, token: token) { image in
+           print(image)
+            
+            
+            if let imageData = Data(base64Encoded: image.data, options: .ignoreUnknownCharacters) {
+                self.profileImageView.image = UIImage(data: imageData)
+                print(imageData)
+            }
+            
+        }
+        
+//        let data = Data(base64Encoded: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCABAAEADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiopp1gALg4PcUJXAloqut7A/Rqk+0Rf38fUYp2YrklFRfaIi2A2foM0vnR5wXAPoeKLMdySikDK3RgfoaWkAVma0+y1B9606x/EJIskx13VUdxPYp2zl1GVyParjvkx43KWUAnjPU+tZdr9zkVad9ph7jaOD9TWjJMnTNS+26C15qFqLuWCeZNkEIZmKsF+Vc9cGtJdetreFUOm6pFGP8ApxchRn2z61z+kmKOwmD25lA1S8C44x84rpYZBPHH5R8lyf4o2fPt1GKTVwFk1jTBLLE9ysTxOY2M0bRru54DMAG6djWxZ824+p/nWJHeyeV5cqyZxyy4x+RY1s6ec2i5OTk8n60pbDW5arE8SNi1jA/vf4Vt15/8TfFcPhlNOWW0kuftRfAjmEZXbg55Bz1pU4uUrLcJSUVeWxp2eMYLLj2rQKwtGjPjgAZ3ds14sPi3aRNkaHcH63i//E1KPjVAoH/EknGP+nxP/iK39hU7fkZqtTfU9A8P+W+m3LhA6nUrtlB/3x61src7GVvs06KByFjU5/EGvMvD3jS4/sTTYbTSDc3F891c4a8SMIPO28krz0qw3izWJHQroSfOQqn+04iOTjqU4qOR/wBNF8y/pM9GW4jIKrbThevEWB/OtrSz/omB2YivH4/GmqRoZ/7GhKDg/wDE1hHP/fI/WvRfAWvjxFoEt59m+zMly8LxecsuCoH8S8d6mUXa/wCqGpK9jdl02GYcy3S/7lzIv8mrJvvBOh6p5f8AaVu995efL+1yGUpnGcFs46CuhorNSa2HZHI/8Kx8H/8AQDtP+/K/4Up+GXg8qQdDtMEY4iUfyFdbRT55dwsjlE+G3hJLaG2/saCSGAMIll+fYGYsQC2SOSTTh8N/Bw/5l6wP1hFdTRRzS7hZHNL8PfCC/wDMu6cfrAprY03SNP0aBoNNs4rWFm3GOJdq59cdKu0UnJvdhZH/2Q==", options: .ignoreUnknownCharacters)
+//        profileImageView.image = UIImage(data: data!)
     }
     
     
@@ -138,6 +157,8 @@ extension UIStackView {
 extension ProfileViewController: UserInfoDelegate {
     func getUserInfo() {
         networkManager.getUserInfo(token: token) { [weak self] person in
+            self?.schoolTextLabel.text = person.school
+            self?.universityTextLabel.text = person.university
             print(person)
         }
     }

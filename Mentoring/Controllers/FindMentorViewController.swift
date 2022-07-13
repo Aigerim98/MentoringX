@@ -46,6 +46,7 @@ class FindMentorViewController: UIViewController {
     
     func getMentorIDs() {
         networkManager.getMentorId(token: token) { [weak self] ids in
+            
             guard let self = self else { return }
                 for id in ids.ids {
                     self.networkManager.getMentorsById(id: id, token: self.token) { [weak self] mentorCard in
@@ -139,7 +140,7 @@ extension FindMentorViewController: ButtonStackViewDelegate, SwipeCardStackDataS
 
   func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
     print("Swiped \(direction) on \(mentors[index].name)")
-      networkManager.postLikeMentor(token: token, id: mentors[index].id) { [weak self] result in
+      networkManager.postLikeToMentor(token: token, id: mentors[index].id) { [weak self] result in
           print(result)
       }
   }

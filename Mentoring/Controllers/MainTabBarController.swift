@@ -30,6 +30,12 @@ class MainTabBarController: UITabBarController {
                 profileViewController.token = token
             }
             
+            if let navigationController = viewController as? UINavigationController, let friendsViewController = navigationController.viewControllers.first as? FriendsViewController {
+                
+               
+                friendsViewController.token = token
+            }
+            
             if let newsViewController = viewController as? NewsViewController {
               //  newsViewController.person = person
                 newsViewController.education = educations
